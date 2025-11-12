@@ -1,0 +1,12 @@
+# ASWCode robots.txt
+# Allow all search engines to index the site
+User-agent: *
+Allow: /
+
+# Optional: disallow admin or private directories if any
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+
+# Sitemap (helps Google index all pages)
+Sitemap: https://ascwcode.com/sitemap.xml
