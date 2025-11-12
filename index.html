@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Title and Description -->
+  <title>ASWCode | Free HTML, CSS & JavaScript Snippets and Projects</title>
+  <meta name="description" content="ASWCode offers ready-to-use frontend code snippets, projects, and mini web apps for beginners and developers. Learn HTML, CSS, and JavaScript through real-world examples.">
+  <meta name="keywords" content="ASWCode, HTML, CSS, JavaScript, code snippets, frontend projects, web development, coding tutorials, Achini Wanasinghe">
+  <meta name="author" content="Achini Wanasinghe">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://aswcode.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ASWCode | Frontend Code Snippets & Projects">
+  <meta property="og:description" content="Explore free HTML, CSS, and JavaScript snippets and projects. Build, learn, and create with ASWCode.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aswcode.com/">
+  <meta property="og:image" content="https://aswcode.com/preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASWCode | Learn Frontend Coding">
+  <meta name="twitter:description" content="Free HTML, CSS, and JS snippets & projects for beginners and developers.">
+  <meta name="twitter:image" content="https://aswcode.com/preview.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://aswcode.com/favicon.ico" type="image/x-icon">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ASWCode",
+    "url": "https://aswcode.com/",
+    "logo": "https://aswcode.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/aswcode",
+      "https://www.youtube.com/@aswcode",
+      "https://www.instagram.com/aswcode"
+    ],
+    "description": "A learning platform offering free HTML, CSS, and JavaScript snippets and mini projects.",
+    "founder": "Achini Wanasinghe",
+    "foundingDate": "2025"
+  }
+  </script>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    /* ===== Base ===== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #050505, #0b0b0b);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    header {
+      background: #1a1a1a;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #00bcd4;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .logo:hover {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff, 0 0 30px #00eaff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #00eaff;
+      transition: 0.3s;
+      box-shadow: 0 0 8px #00eaff;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #00eaff;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00bcd4, #ff6b6b, #f8e71c, #00bcd4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: shimmer 3s linear infinite;
+      margin-bottom: 20px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-bottom: 30px;
+      max-width: 700px;
+      opacity: 0;
+      animation: fadeSlideUp 1s 0.5s forwards;
+      position: relative;
+    }
+
+    .hero .btn {
+      padding: 12px 28px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      background: #00bcd4;
+      color: #fff;
+      z-index: 2;
+      position: relative;
+      opacity: 0;
+      animation: popUp 0.8s 1s forwards;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4;
+    }
+
+    .hero .btn:hover {
+      background: #055861;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00bcd4, 0 0 40px #00bcd4;
+    }
+
+    /* ---------- STAR EFFECT ---------- */
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      text-align: center;
+      padding: 60px 20px;
+      background: radial-gradient(circle at top, #0a0a0a, #000);
+      animation: fadeIn 2s ease;
+    }
+
+    .about h2 {
+      font-size: 2.4em;
+      color: #00eaff;
+      margin-bottom: 60px;
+    }
+
+    .about-box {
+      max-width: 800px;
+      background: rgba(15, 15, 15, 0.8);
+      padding: 40px;
+      border-radius: 15px;
+      border: 1px solid rgba(0, 234, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 234, 255, 0.2);
+      line-height: 1.7;
+      color: #ddd;
+      font-size: 1.05em;
+      backdrop-filter: blur(10px);
+      animation: glowPulse 3s infinite alternate ease-in-out;
+    }
+
+    /* ---------- FEATURE CARDS ---------- */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .feature-card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 250px;
+      max-width: 300px;
+      text-align: center;
+      border: 1px solid rgba(0, 234, 255, 0.2);
+      box-shadow: 0 4px 15px rgba(67, 66, 117, 0.3);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.8),
+                  0 0 25px rgba(0, 188, 212, 0.6),
+                  0 0 35px rgba(0, 188, 212, 0.4);
+    }
+
+    .feature-card h3 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .feature-card p {
+      color: #aaa;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .feature-card a.btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 20px;
+      background: #00bcd4;
+      color: #fff;
+      border-radius: 5px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .feature-card a.btn:hover {
+      background: #60a6df;
+      transform: scale(1.05);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+    }
+
+    .footer-content h3 {
+      color: #00eaff;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .footer-content p {
+      color: #ccc;
+      max-width: 600px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+
+    .footer-email {
+      color: #00eaff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .footer-email:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    /* ---------- ANIMATIONS ---------- */
+    @keyframes fadeSlideUp {0%{opacity:0;transform:translateY(30px);}100%{opacity:1;transform:translateY(0);} }
+    @keyframes popUp {0%{opacity:0;transform:scale(0.8);}100%{opacity:1;transform:scale(1);} }
+    @keyframes shimmer {0%{background-position:0% 50%;}100%{background-position:200% 50%;} }
+    @keyframes fall {0%{transform:translateY(-10px);}100%{transform:translateY(110vh);} }
+    @keyframes fadeIn {0%{opacity:0;transform:translateY(-20px);}100%{opacity:1;transform:translateY(0);} }
+    @keyframes glowPulse {from{box-shadow:0 0 20px rgba(0,234,255,0.2);}to{box-shadow:0 0 40px rgba(0,234,255,0.6);} }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 20px;
+      }
+
+      /* Show menu toggle */
+      .menu-toggle {
+        display: block;
+      }
+
+      /* Mobile menu centered */
+      .nav-links {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        position: fixed;
+        top: 50%;       /* vertical center */
+        left: 50%;      /* horizontal center */
+        transform: translate(-50%, -50%);
+        background: rgb(10, 10, 10);
+        border-radius: 15px;
+        padding: 30px 20px;
+        width: 80%;
+        max-width: 300px;
+        align-items: center;
+        box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+        z-index: 999;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-links li {
+        margin: 15px 0;
+      }
+
+      .hero p {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ---------- HEADER ---------- -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">ASWCode</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="snippets.html">Snippets</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- ---------- HERO ---------- -->
+  <section class="hero" id="hero">
+    <h1>Welcome to ASWCode</h1>
+    <p>Discover ready-to-use HTML, CSS & JavaScript snippets, projects, and interactive coding tools. Build your skills and create amazing web apps.</p>
+    <a href="#about" class="btn">Learn More</a>
+  </section>
+
+  <!-- ---------- ABOUT ---------- -->
+  <section class="about" id="about">
+    <h2>About ASWCode</h2>
+    <div class="about-box">
+      <p><strong>ASWCode</strong> is a modern learning platform designed for beginners, students, and developers who want to explore the world of <span style="color:#00eaff;">HTML</span>, <span style="color:#00eaff;">CSS</span>, and <span style="color:#00eaff;">JavaScript</span> through practical examples.</p>
+      <p>We offer <strong>code snippets</strong>, <strong>real-world mini projects</strong>, and <strong>interactive games</strong> that help you learn by doing. Each snippet is crafted to be easy to understand, responsive, and ready to use in your own projects.</p>
+      <p>Our goal is to make coding <strong>fun, simple, and accessible</strong> to everyone — whether you’re building your first website or exploring creative front-end designs.</p>
+      <p><strong>ASWCode</strong> is a personal project by <strong>Achini Wanasinghe</strong>, built to share beginner-friendly code snippets, projects, and ideas that make learning front-end development easier.</p>
+
+       <p>
+  
+
+      <p>Join the <strong>ASWCode</strong> community and start your journey to becoming a confident web developer today!</p>
+    </div>
+  </section>
+
+  <!-- ---------- FEATURE CARDS ---------- -->
+  <section class="features" id="features">
+    <div class="feature-card">
+      <h3>Code Snippets</h3>
+      <p>Copy-ready HTML, CSS, and JS snippets to speed up your web projects.</p>
+      <a href="snippets.html" class="btn">Explore Snippets</a>
+    </div>
+    <div class="feature-card">
+      <h3>Mini Projects</h3>
+      <p>Learn by building real-world examples step-by-step.</p>
+      <a href="projects.html" class="btn">View Projects</a>
+    </div>
+    
+  </section>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer>
+    <div class="footer-content">
+      <h3>Let's Connect</h3>
+      <p>Have a question, feedback, or collaboration idea? We'd love to hear from you!</p>
+      <p>Email: <a href="mailto:info.aswcode@gmail.com" class="footer-email">info.aswcode@gmail.com</a></p>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode.com. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ---------- SCRIPT ---------- -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    navLinks.classList.remove('active');
+  }
+});
+
+
+    const hero = document.querySelector('.hero');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.top = Math.random() * 100 + 'vh';
+      const size = 2 + Math.random() * 2;
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      star.style.animationDuration = 5 + Math.random() * 5 + 's';
+      hero.appendChild(star);
+    }
+  </script>
+</body>
+</html>

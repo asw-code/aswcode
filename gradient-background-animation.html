@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ASWCode | Gradient Background Animation CSS Snippet</title>
+<meta name="description" content="Learn how to create a smooth, animated gradient background using pure CSS for your website. This snippet adds a modern, dynamic effect to your web projects, enhancing user experience and design aesthetics.">
+<meta name="keywords" content="CSS gradient animation, background animation CSS, animated background, web design snippets, ASWCode, website hero animation, web design effects">
+<meta name="robots" content="index, follow">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M22GBBYSJE');
+</script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+  /* ===== Base ===== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #050505, #0b0b0b);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    header {
+      background: #1a1a1a;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00bcd4;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff, 0 0 30px #00eaff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00eaff;
+  transition: 0.3s;
+  box-shadow: 0 0 8px #00eaff;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #00eaff;
+}
+
+/* ---------- PAGE HERO ---------- */
+.snippet-hero {
+  text-align: center;
+  padding: 120px 20px 20px;
+  color: #fff;
+}
+
+.snippet-hero h1 {
+  font-size: 2.2rem;
+  color: #00eaff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.snippet-hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---------- AD SLOT ---------- */
+.ad-slot {
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin: 20px auto;
+  color: #888;
+  font-size: 0.9rem;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.15);
+}
+
+/* ---------- SNIPPET CARD ---------- */
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 80px;
+}
+
+.card {
+  background: rgba(15, 15, 15, 0.85);
+  border-radius: 16px;
+  padding: 25px;
+  width: 80%;
+  max-width: 1000px;
+  box-shadow: 0 0 30px rgba(0, 188, 212, 0.15);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+.card-content {
+  display: flex;
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+
+
+/* LEFT SIDE */
+.description {
+  flex: 1;
+  min-width: 250px;
+}
+
+.description h3 {
+  font-size: 1.6rem;
+  color: #00eaff;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.description ul {
+  margin: 10px 0 0 15px;
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+/* RIGHT SIDE */
+.code-demo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+pre {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #00eaff;
+  overflow: auto;
+  max-height: 240px;
+  scrollbar-width: thin;
+  scrollbar-color: #00eaff rgba(15, 15, 15, 0.6);
+}
+pre::-webkit-scrollbar {
+  width: 6px;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #00eaff;
+  border-radius: 10px;
+}
+pre::-webkit-scrollbar-track {
+  background: rgba(15, 15, 15, 0.6);
+}
+
+.demo-container iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+  border-radius: 10px;
+  background: #0b0b0b;
+  box-shadow: 0 4px 15px rgba(0, 234, 255, 0.2);
+}
+
+.demo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.demo-buttons button {
+  padding: 8px 15px;
+  background: #00eaff;
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.demo-buttons button:hover {
+  background: #00a8cc;
+  box-shadow: 0 0 12px #00eaff;
+  transform: scale(1.05);
+}
+
+/* ---------- FLOATING BACK BUTTON ---------- */
+.floating-back {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00eaff;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+  transition: 0.3s;
+  z-index: 200;
+}
+
+.floating-back:hover {
+  background: #00a8cc;
+  color: #fff;
+  box-shadow: 0 0 25px #00eaff;
+  transform: scale(1.1);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .card-content {
+    flex-wrap: wrap;
+  }
+
+   .card-content p {
+    margin-left: 10px;
+    margin-right: 18px;
+  }
+
+  .description, .code-demo {
+    width: 100%;
+  }
+
+  .card {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+/* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 20px;
+      }
+
+      /* Show menu toggle */
+      .menu-toggle {
+        display: block;
+      }
+
+      /* Mobile menu centered */
+      .nav-links {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        position: fixed;
+        top: 50%;       /* vertical center */
+        left: 50%;      /* horizontal center */
+        transform: translate(-50%, -50%);
+        background: rgb(10, 10, 10);
+        border-radius: 15px;
+        padding: 30px 20px;
+        width: 80%;
+        max-width: 300px;
+        align-items: center;
+        box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+        z-index: 999;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-links li {
+        margin: 15px 0;
+      }
+
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">ASWCode</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="snippets.html" class="active">Snippets</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
+</header>
+
+<section class="snippet-hero">
+  <h1>Gradient Background Animation</h1>
+  <p>Create smooth, animated gradient backgrounds using pure CSS for modern web design.</p>
+</section>
+
+<!-- Top Ad Slot 
+<div class="ad-slot">Ad Placeholder (Top)</div>  -->
+
+<div class="card-wrapper">
+  <div class="card">
+    <div class="card-content">
+      <div class="description">
+        <h3>Gradient Background Animation</h3>
+        <p>This snippet demonstrates how to create a fully animated gradient background using only CSS. By utilizing the <code>linear-gradient</code> property combined with keyframe animations, you can generate a dynamic, continuously moving background effect. This type of background is perfect for hero sections, landing pages, or banners, giving your website a modern and visually engaging look without using any JavaScript. You can customize the colors, speed, and direction to fit your project’s theme. This snippet is optimized for responsiveness and performance, ensuring smooth animations across devices, making it an essential tool for web developers looking to enhance their UI/UX design effortlessly.</p>
+        <ul>
+          <li><strong>How to use:</strong> Copy and paste into your HTML file.</li>
+          <li><strong>Change colors:</strong> Edit <code>linear-gradient</code> values.</li>
+          <li><strong>Change speed:</strong> Adjust animation duration.</li>
+        </ul>
+      </div>
+
+      <div class="code-demo">
+        <pre id="code4">&lt;style&gt;
+body {
+  height: 100vh;
+  background: linear-gradient(-45deg, #ff0080, #00f2ff, #00ff80, #ffcc00);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+&lt;/style&gt;</pre>
+
+        <div class="demo-container">
+          <iframe id="demo4"></iframe>
+        </div>
+
+        <div class="demo-buttons">
+          <button onclick="copyCode('code4')">Copy</button>
+          <button onclick="runCode('code4','demo4')">Run</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Ad Slot 
+<div class="ad-slot">Ad Placeholder (Bottom)</div>  -->
+
+<a href="snippets.html" class="floating-back">&larr; Back to Snippets</a>
+
+<script>
+   const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    navLinks.classList.remove('active');
+  }
+});
+
+
+  // Copy & Run
+  function copyCode(id){
+    const code = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(code);
+    alert('Code copied!');
+  }
+  function runCode(codeId, iframeId){
+    const code = document.getElementById(codeId).innerText;
+    const iframe = document.getElementById(iframeId);
+    iframe.srcdoc = code;
+  }
+
+
+  function copyCode(id) {
+  const code = document.getElementById(id).innerText;
+
+  navigator.clipboard.writeText(code).then(() => {
+    // Create "Copied!" popup
+    const popup = document.createElement('div');
+    popup.textContent = '✅ Code copied!';
+    popup.style.position = 'fixed';
+    popup.style.bottom = '25px';
+    popup.style.right = '25px';
+    popup.style.background = '#00eaff';
+    popup.style.color = '#000';
+    popup.style.fontWeight = '600';
+    popup.style.padding = '10px 20px';
+    popup.style.borderRadius = '8px';
+    popup.style.boxShadow = '0 0 15px rgba(0, 234, 255, 0.6)';
+    popup.style.fontSize = '0.95rem';
+    popup.style.zIndex = '9999';
+    popup.style.transition = 'all 0.3s ease';
+    popup.style.opacity = '1';
+    popup.style.transform = 'translateY(0)';
+    document.body.appendChild(popup);
+
+    // Animate fade-out
+    setTimeout(() => {
+      popup.style.opacity = '0';
+      popup.style.transform = 'translateY(20px)';
+    }, 1200);
+
+    // Remove after animation
+    setTimeout(() => popup.remove(), 1800);
+  }).catch(() => {
+    alert('Copy failed! Try manually.');
+  });
+}
+
+</script>
+
+</body>
+</html>

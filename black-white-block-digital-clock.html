@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black & White Block Digital Clock</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .clock {
+      display: flex;
+      gap: 12px;
+    }
+
+    .block {
+      background: #000000;
+      color: #ffffff;
+      font-size: 70px;
+      width: 90px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      box-shadow: none;
+      transition: all 0.2s ease;
+    }
+
+    .colon {
+      width: 40px;
+      background: transparent;
+      font-size: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000000;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .block {
+        width: 75px;
+        height: 100px;
+        font-size: 60px;
+      }
+      .colon {
+        font-size: 60px;
+        width: 35px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .block {
+        width: 65px;
+        height: 90px;
+        font-size: 50px;
+      }
+      .colon {
+        font-size: 50px;
+        width: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .block {
+        width: 55px;
+        height: 80px;
+        font-size: 40px;
+      }
+      .colon {
+        font-size: 40px;
+        width: 25px;
+      }
+      .clock {
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .block {
+        width: 45px;
+        height: 65px;
+        font-size: 32px;
+      }
+      .colon {
+        font-size: 32px;
+        width: 20px;
+      }
+      .clock {
+        gap: 6px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .block {
+        width: 40px;
+        height: 55px;
+        font-size: 28px;
+      }
+      .colon {
+        font-size: 28px;
+        width: 18px;
+      }
+      .clock {
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="clock" id="clock">
+    <div class="block" id="hours1">0</div>
+    <div class="block" id="hours2">0</div>
+    <div class="colon">:</div>
+    <div class="block" id="minutes1">0</div>
+    <div class="block" id="minutes2">0</div>
+    <div class="colon">:</div>
+    <div class="block" id="seconds1">0</div>
+    <div class="block" id="seconds2">0</div>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+
+      document.getElementById('hours1').textContent = h[0];
+      document.getElementById('hours2').textContent = h[1];
+      document.getElementById('minutes1').textContent = m[0];
+      document.getElementById('minutes2').textContent = m[1];
+      document.getElementById('seconds1').textContent = s[0];
+      document.getElementById('seconds2').textContent = s[1];
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+</body>
+</html>

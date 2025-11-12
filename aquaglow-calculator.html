@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaGlow Calculator</title>
+<style>
+    /* General styles */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: radial-gradient(circle at top, #0a0a0a, #000);
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+    }
+
+    /* Calculator container */
+    .calculator {
+        background: rgba(20, 20, 20, 0.95);
+        padding: 25px;
+        border: 2px solid #00fff7;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(0, 255, 247, 0.3);
+        width: 330px;
+        max-width: 90%;
+        transition: 0.3s;
+    }
+
+    /* Display screen */
+    .display {
+        width: 88%;
+        height: 50px;
+        background: #000;
+        border-radius: 15px;
+        text-align: right;
+        padding: 15px 20px;
+        font-size: 2rem;
+        color: #00fff7;
+        margin-bottom: 20px;
+        box-shadow: inset 0 0 10px rgba(0, 255, 247, 0.4);
+        overflow-x: auto;
+    }
+
+    /* Buttons grid */
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    /* Button styles */
+    .btn {
+        background: #111;
+        border: none;
+        border-radius: 50%;
+        color: #00fff7;
+        font-size: 1.5rem;
+        padding: 18px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 15px rgba(0, 255, 247, 0.1);
+    }
+
+    .btn:hover {
+        box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7 inset;
+        transform: scale(1.1);
+    }
+
+    .btn:active {
+        transform: scale(0.95);
+        box-shadow: inset 0 0 10px rgba(0, 255, 247, 0.7);
+    }
+
+    /* Zero button */
+    .btn-zero {
+        grid-column: span 2;
+        border-radius: 50px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 400px) {
+        .calculator {
+            padding: 20px;
+            width: 280px;
+        }
+        .display {
+            font-size: 1.5rem;
+            height: 60px;
+        }
+        .btn {
+            font-size: 1.2rem;
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+        <button class="btn" onclick="clearDisplay()">C</button>
+        <button class="btn" onclick="appendValue('/')">/</button>
+        <button class="btn" onclick="appendValue('*')">*</button>
+        <button class="btn" onclick="appendValue('-')">-</button>
+
+        <button class="btn" onclick="appendValue('7')">7</button>
+        <button class="btn" onclick="appendValue('8')">8</button>
+        <button class="btn" onclick="appendValue('9')">9</button>
+        <button class="btn" onclick="appendValue('+')">+</button>
+
+        <button class="btn" onclick="appendValue('4')">4</button>
+        <button class="btn" onclick="appendValue('5')">5</button>
+        <button class="btn" onclick="appendValue('6')">6</button>
+        <button class="btn" onclick="calculateResult()">=</button>
+
+        <button class="btn" onclick="appendValue('1')">1</button>
+        <button class="btn" onclick="appendValue('2')">2</button>
+        <button class="btn" onclick="appendValue('3')">3</button>
+        <button class="btn" onclick="appendValue('.')">.</button>
+
+        <button class="btn btn-zero" onclick="appendValue('0')">0</button>
+    </div>
+</div>
+
+<script>
+    const display = document.getElementById('display');
+
+    function appendValue(val) {
+        if (display.innerText === "0") display.innerText = val;
+        else display.innerText += val;
+    }
+
+    function clearDisplay() {
+        display.innerText = "0";
+    }
+
+    function calculateResult() {
+        try {
+            display.innerText = eval(display.innerText);
+        } catch {
+            display.innerText = "Error";
+        }
+    }
+</script>
+</body>
+</html>
