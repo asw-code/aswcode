@@ -97,27 +97,74 @@
     .nav-links a.active { color: #00eaff; text-shadow: 0 0 10px #00eaff; }
     .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: #00eaff; }
 
-    /* ===== Blog Section ===== */
-    .blog-content { padding: 120px 20px 60px; display: flex; justify-content: center; }
-    .blog-box {
-      max-width: 900px;
-      background: rgb(235, 215, 215);
-      padding: 40px;
-      border-radius: 15px;
-      border: 1px solid rgba(0, 234, 255, 0.2);
-      box-shadow: 0 0 30px rgba(0, 234, 255, 0.2);
-      line-height: 1.8;
-      color: #ddd;
-      font-size: 1.05em;
-      backdrop-filter: blur(10px);
-      animation: glowPulse 3s infinite alternate ease-in-out;
-    }
-    .blog-box h1 { text-align: center; color: #04484e; margin-bottom: 25px; font-size: 2.2em; }
-    .article-img { width: 100%; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
-    .blog-box h2 { color: #04484e; margin-top: 30px; font-size: 1.5em; border-bottom: 0.5px solid  #04484e; }
-    .blog-box h3 { margin-top: 20px; font-size: 1.2em; color: #04484e;}
-    .blog-box p, ul { margin: 15px 0; color: #000;}
-    ul { margin-left: 20px; }
+      /* ===== Blog Section ===== */
+.blog-content {
+  padding: 120px 20px 60px;
+  display: flex;
+  justify-content: center;
+  background:#050505;; /* light grey background for page contrast */
+}
+
+.blog-box {
+  max-width: 900px;
+  background: #ffffff; /* main white background */
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+  color: #222; /* dark text for readability */
+  font-size: 1.05em;
+  backdrop-filter: blur(8px);
+}
+
+.blog-box h1 {
+  text-align: center;
+  color: #04484e; /* brand teal */
+  margin-bottom: 25px;
+  font-size: 2.2em;
+ 
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.article-img {
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-box h2 {
+  color: #04484e;
+  margin-top: 35px;
+  font-size: 1.6em;
+   border-bottom: 3px solid #056d7a;
+  padding-left: 10px;
+}
+
+.blog-box h3 {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #04484e;
+  font-weight: 600;
+}
+
+.blog-box p, 
+.blog-box ul {
+  margin: 15px 0;
+  color: #333; /* slightly lighter than black for softer look */
+}
+
+.blog-box ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.blog-box ul li {
+  margin: 8px 0;
+}
 
 
     /* ---------- FLOATING BACK BUTTON ---------- */
