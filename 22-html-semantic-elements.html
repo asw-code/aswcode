@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Semantic Elements | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML semantic elements like article, aside, header, footer, main, section, details, figure, mark, time, and more explained with examples.">
+  <meta name="keywords" content="HTML semantic elements, article tag, aside tag, header tag, footer tag, section tag, main tag, details summary, figure figcaption, mark, time, ASWCode tutorial">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/semantic-elements.html">
+
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="HTML Semantic Elements | ASWCode Tutorials">
+  <meta property="og:description" content="Learn HTML semantic elements like article, header, footer, nav, section, aside, and more with easy examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/semantic-elements.html">
+  <meta property="og:image" content="https://aswcode.com/assets/favicon.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Semantic Elements | ASWCode Tutorials">
+  <meta name="twitter:description" content="A simple guide to HTML semantic elements with examples.">
+  <meta name="twitter:image" content="https://aswcode.com/assets/favicon.png">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 { color: #00bcd4; font-size: 2rem; }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 { color: #0f172a; margin-bottom: 10px; }
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+   
+
+    #np {
+        color: rgb(30, 224, 224);
+        font-weight: 600;
+    }
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px;
+    }
+
+    
+
+    article, aside, section, figure {
+      display: block;
+      padding: 10px;
+      border: 1px solid #94a3b8;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      background: #e2e8f0;
+    }
+
+    mark { background: #fde68a; padding: 2px 4px; }
+
+    
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+
+     /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Tutorial -->
+  <main>
+    <h1>HTML Semantic Elements</h1>
+    <p>Semantic elements give meaning to your HTML content. They help search engines and screen readers understand your page better.</p>
+
+    
+
+    <h2>&lt;article&gt; — Article Content</h2>
+    <p>Represents a standalone piece of content like a blog post:</p>
+    <div class="live-preview">
+      <article>
+        <h3>My First Blog Post</h3>
+        <p>This is a simple article example.</p>
+      </article>
+    </div>
+
+    <h2>&lt;aside&gt; — Sidebar</h2>
+    <p>Used for side content related to the main content:</p>
+    <div class="live-preview">
+      <aside>
+        <p>This is an aside: useful links or ads.</p>
+      </aside>
+    </div>
+
+    <h2>&lt;details&gt; &lt;summary&gt; — Collapsible Content</h2>
+    <p>Used to hide and show extra information:</p>
+    <div class="live-preview">
+      <details>
+        <summary>Click to see more info</summary>
+        <p>This is the hidden content revealed when clicked.</p>
+      </details>
+    </div>
+
+    <h2>&lt;figure&gt; &lt;figcaption&gt; — Image & Caption</h2>
+    <p>Used for images, diagrams, or illustrations:</p>
+    <div class="live-preview">
+      <figure>
+        <img src="https://via.placeholder.com/200" alt="Example Semantic Element Image">
+        <figcaption>This is an example caption.</figcaption>
+      </figure>
+    </div>
+
+    <h2>&lt;header&gt; &lt;footer&gt;</h2>
+    <p>Defines the beginning and end of a page or section:</p>
+    <div class="live-preview">
+      <header><p>Header Section</p></header>
+      <footer><p>Footer Section</p></footer>
+    </div>
+
+    <h2>&lt;main&gt; — Main Content</h2>
+    <p>Only one &lt;main&gt; element per page:</p>
+    <div class="live-preview">
+      <main>
+        <p>This is the main content of the page.</p>
+      </main>
+    </div>
+
+    <h2>&lt;mark&gt; — Highlight Text</h2>
+    <p>Use to highlight important text:</p>
+    <div class="live-preview">
+      <p>This is <mark>important text</mark> highlighted.</p>
+    </div>
+
+    <h2>&lt;nav&gt; — Navigation Links</h2>
+    <p>Used for navigation menus:</p>
+    <div class="live-preview">
+      <nav aria-label="Main Navigation">
+        <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <h2>&lt;section&gt; — Section of Content</h2>
+    <p>Used for grouping related content:</p>
+    <div class="live-preview">
+      <section>
+        <h3>Section Title</h3>
+        <p>Content inside this section.</p>
+      </section>
+    </div>
+
+    <h2>&lt;time&gt; — Date and Time</h2>
+    <p>Used to show readable and machine-friendly dates:</p>
+    <div class="live-preview">
+      <p>Published on: <time datetime="2025-11-12">November 12, 2025</time></p>
+    </div>
+
+    
+
+ <p  id="np">Next Lesson → <a href="23-html-entities.html">HTML Entities</a></p>
+    <p  id="np">Previous Lesson → <a href="21-html-computer-code.html">HTML Computer Code Elements</a></p>
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The HTML Style Attribute | ASWCode Tutorials</title>
+  <meta name="description" content="Learn the HTML style attribute in a simple way. Change text color, font size, background color, borders, alignment, and more with live examples.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/style-attribute.html">
+  <meta name="keywords" content="HTML style attribute, CSS inline, text color, font size, background, border, padding, margin, text-align, font-family, text-decoration, ASWCode HTML tutorial">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+     
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 2em;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 { color: #0f172a; margin-bottom: 10px; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; margin-top: 25px; }
+    h3 { font-size: 1.2em; margin-top: 20px; }
+     p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+   
+     a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+      text-align: center;
+    }
+
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+   footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+
+   
+
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <main>
+    <h1>The HTML Style Attribute</h1>
+    <p>The <code>style</code> attribute lets you add CSS styles directly to an HTML element. This changes how it looks.</p>
+
+    
+
+    <h2>1. Change Text Color</h2>
+    <p>Use <code>color</code> to change text color:</p>
+    <div class="example">
+<pre>
+&lt;p style="color: red;"&gt;This text is red.&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="color: red;">This text is red.</p>
+    </div>
+
+    <h2>2. Change Font Size</h2>
+    <p>Use <code>font-size</code> to make text bigger or smaller:</p>
+    <div class="example">
+<pre>
+&lt;p style="font-size: 24px;"&gt;Big text&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="font-size: 24px;">Big text</p>
+    </div>
+
+    <h2>3. Change Background Color</h2>
+    <p>Use <code>background-color</code> to add a background color:</p>
+    <div class="example">
+<pre>
+&lt;p style="background-color: yellow;"&gt;Yellow background&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="background-color: yellow;">Yellow background</p>
+    </div>
+
+    <h2>4. Add Border</h2>
+    <p>Use <code>border</code> to add a border around text or element:</p>
+    <div class="example">
+<pre>
+&lt;p style="border: 2px solid blue; padding: 5px;"&gt;Text with border&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="border: 2px solid blue; padding: 5px;">Text with border</p>
+    </div>
+
+    <h2>5. Text Alignment</h2>
+    <p>Use <code>text-align</code> to align text:</p>
+    <div class="example">
+<pre>
+&lt;p style="text-align: center;"&gt;This text is centered&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="text-align: center;">This text is centered</p>
+    </div>
+
+    <h2>6. Padding & Margin</h2>
+    <p>Use <code>padding</code> for inner space, <code>margin</code> for outer space:</p>
+    <div class="example">
+<pre>
+&lt;p style="padding: 10px; margin: 20px; border: 1px solid black;"&gt;Text with padding and margin&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="padding: 10px; margin: 20px; border: 1px solid black;">Text with padding and margin</p>
+    </div>
+
+    <h2>7. Font Family</h2>
+    <p>Use <code>font-family</code> to change the font:</p>
+    <div class="example">
+<pre>
+&lt;p style="font-family: Arial, sans-serif;"&gt;This text uses Arial font&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="font-family: Arial, sans-serif;">This text uses Arial font</p>
+    </div>
+
+    <h2>8. Text Decoration</h2>
+    <p>Use <code>text-decoration</code> for underline or line-through:</p>
+    <div class="example">
+<pre>
+&lt;p style="text-decoration: underline;"&gt;Underlined text&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="text-decoration: underline;">Underlined text</p>
+    </div>
+
+    <h2>9. Combine Multiple Styles</h2>
+    <p>You can write many styles in one <code>style</code> attribute, separated by semicolons:</p>
+    <div class="example">
+<pre>
+&lt;p style="color: white; background-color: blue; font-size: 20px; padding: 10px;"&gt;
+  Styled text with multiple properties
+&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="color: white; background-color: blue; font-size: 20px; padding: 10px;">
+        Styled text with multiple properties
+      </p>
+    </div>
+
+  
+    <p id="np">Next Lesson → <a href="11-text-formatting.html">HTML Text Formatting</a></p>
+    <p id="np"> Previous Lesson → <a href="09-html-links.html">HTML Links</a></p>
+
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+ 
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HTML Comments and Spacing | ASWCode Tutorials</title>
+  <meta name="description" content="Learn how to use HTML comments, line breaks, and spacing. Understand the use of comment, br, and hr tags with simple and clear examples.">
+  <meta name="keywords" content="HTML comments, HTML spacing, br tag, hr tag, ASWCode, HTML basics">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/comments.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+  <!-- Preconnect for faster load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HTML Comments and Spacing | ASWCode Tutorials">
+  <meta property="og:description" content="Learn how to use HTML comments, line breaks, and spacing in simple steps.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/comments.html">
+  <meta property="og:image" content="https://aswcode.com/assets/og-cover.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Comments and Spacing | ASWCode Tutorials">
+  <meta name="twitter:description" content="Understand comment, br, and hr tags with simple examples.">
+  <meta name="twitter:image" content="https://aswcode.com/assets/og-cover.png">
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "HTML Comments and Spacing | ASWCode Tutorials",
+    "description": "Learn how to use HTML comments, line breaks, and spacing with simple examples.",
+    "author": { "@type": "Person", "name": "ASWCode" },
+    "publisher": { "@type": "Organization", "name": "ASWCode" },
+    "url": "https://aswcode.com/tutorials/html/comments.html"
+  }
+  </script>
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+   
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <main>
+    <h1>HTML Comments and Spacing</h1>
+    <p>In this lesson, you’ll learn how to add comments (notes that don’t show on the webpage) and how to add spaces or lines between your content. These are small but very useful parts of HTML!</p>
+
+   
+
+    <h2>1. HTML Comments</h2>
+    <p>Comments are notes you can write inside your HTML code. They don’t appear on the webpage — only developers can see them when viewing the code.</p>
+
+    <p>Comments start with <code>&lt;!--</code> and end with <code>--&gt;</code>.</p>
+
+    <div class="example">
+      <pre>
+&lt;!-- This is a comment --&gt;
+&lt;p&gt;This is visible on the page.&lt;/p&gt;
+&lt;!-- Comments help explain your code to others (and yourself)! --&gt;
+      </pre>
+    </div>
+
+    <h2>2. Line Breaks: &lt;br&gt;</h2>
+    <p>The <code>&lt;br&gt;</code> tag adds a single line break — like pressing "Enter" once in a document.</p>
+
+    <div class="example">
+      <pre>
+&lt;p&gt;Hello&lt;br&gt;Welcome to ASWCode!&lt;/p&gt;
+      </pre>
+    </div>
+
+    <div class="example">
+      Hello<br>Welcome to ASWCode!
+    </div>
+
+    <h2>3. Horizontal Line: &lt;hr&gt;</h2>
+    <p>The <code>&lt;hr&gt;</code> tag creates a horizontal line across the page.</p>
+
+    <div class="example">
+      <pre>
+&lt;p&gt;This is above the line.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This is below the line.&lt;/p&gt;
+      </pre>
+    </div>
+
+    <div class="example">
+      <p>This is above the line.</p>
+      <hr>
+      <p>This is below the line.</p>
+    </div>
+
+    <h2>4. Extra Spaces</h2>
+    <p>HTML ignores extra spaces. Use <code>&amp;nbsp;</code> to add manual spacing.</p>
+
+    <div class="example">
+      <pre>
+&lt;p&gt;Hello&amp;nbsp;&amp;nbsp;&amp;nbsp;ASWCode!&lt;/p&gt;
+      </pre>
+    </div>
+
+    <div class="example">
+      Hello   ASWCode!
+    </div>
+
+
+
+    <p  id="np">Next Lesson → <a href="05-html-lists.html">HTML Lists (Ordered & Unordered)</a></p>
+    <p  id="np">Previous Lesson → <a href="03-html-attributes.html">HTML Attributes </a></p>
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

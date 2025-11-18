@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HTML Block & Inline Elements | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML block and inline elements in a simple way with examples and live previews. Understand the difference between block and inline elements in HTML.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/block-inline.html">
+  <meta name="keywords" content="HTML block elements, inline elements, HTML layout, ASWCode tutorial">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="HTML Block & Inline Elements | ASWCode Tutorials">
+  <meta property="og:description" content="Learn HTML block and inline elements with examples and live previews.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/block-inline.html">
+  <meta property="og:image" content="https://aswcode.com/assets/favicon.png">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+     body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+    }
+
+    .block {
+      background: #0ea5e9;
+      color: #fff;
+      padding: 10px;
+      margin: 5px 0;
+    }
+
+    .inline {
+      background: #f97316;
+      color: #fff;
+      padding: 5px;
+      margin: 0 2px;
+      display: inline-block;
+    }
+
+    
+     a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Tutorial -->
+  <main>
+    <h1>HTML Block and Inline Elements</h1>
+    <p>HTML elements are either <strong>block</strong> or <strong>inline</strong>. This affects how they appear on the page.</p>
+
+
+    <h2>1. Block Elements</h2>
+    <p>Block elements take the <strong>full width</strong> of the page and start on a <strong>new line</strong>. Examples: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>.</p>
+    <div class="example">
+<pre>
+&lt;div class="block"&gt;This is a div (block)&lt;/div&gt;
+&lt;p class="block"&gt;This is a paragraph (block)&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <div class="block">This is a div (block)</div>
+      <p class="block">This is a paragraph (block)</p>
+    </div>
+
+    <h2>2. Inline Elements</h2>
+    <p>Inline elements only take the <strong>space they need</strong> and do <strong>not start on a new line</strong>. Examples: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;b&gt;</code>.</p>
+    <div class="example">
+<pre>
+&lt;span class="inline"&gt;Hello&lt;/span&gt;
+&lt;span class="inline"&gt;World&lt;/span&gt;
+&lt;b class="inline"&gt;Bold&lt;/b&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <span class="inline">Hello</span>
+      <span class="inline">World</span>
+      <b class="inline">Bold</b>
+    </div>
+
+    <h2>3. Difference in One Sentence</h2>
+    <p><strong>Block:</strong> Starts on a new line, full width.<br>
+       <strong>Inline:</strong> Stays in the same line, only as wide as content.</p>
+
+   
+    <p  id="np">Next Lesson → <a href="15-div-class-id.html">HTML &lt;div&gt; Element</a></p>
+    <p  id="np">Previous Lesson → <a href="13-html-colors.html">HTML Colors</a></p>
+
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

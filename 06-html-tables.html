@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HTML Tables Explained | ASWCode Tutorials</title>
+
+  <meta name="description" content="Learn how to create HTML tables using table, tr, td, and th tags. Includes examples of rows, columns, borders, headers, and beginner-friendly HTML table structures.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/tables" />
+  <meta name="keywords" content="HTML tables, table tag, tr tag, td tag, th tag, HTML tutorial, ASWCode">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ASWCode">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+    }
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 480px;
+    }
+
+    table, th, td {
+      border: 1px solid #0f172a;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+   
+
+    #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+
+    footer {
+      background: #000;
+      padding: 40px 20px 30px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+   
+
+   /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <header aria-label="Website Header">
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <main>
+    <h1>HTML Tables </h1>
+    <p>Tables are used to display data in rows and columns — similar to a spreadsheet. In HTML, tables are created using the <code>&lt;table&gt;</code> tag.</p>
+
+ 
+
+    <h2>1. Basic Table Structure</h2>
+    <p>A table contains rows (<code>&lt;tr&gt;</code>) and header or data cells (<code>&lt;th&gt;</code> / <code>&lt;td&gt;</code>). Headers are bold by default.</p>
+
+    <div class="example">
+      <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+    &lt;th&gt;City&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alice&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+    &lt;td&gt;New York&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bob&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+    &lt;td&gt;London&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+      </pre>
+    </div>
+
+    <div class="example">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+        </tr>
+        <tr>
+          <td>Alice</td>
+          <td>25</td>
+          <td>New York</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>30</td>
+          <td>London</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>2. Table Borders</h2>
+    <p>Modern HTML uses CSS for borders instead of the old <code>border</code> attribute.</p>
+
+    <div class="example">
+      <pre>
+&lt;table style="border: 2px solid black;"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Product&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Book&lt;/td&gt;
+    &lt;td&gt;$10&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+      </pre>
+    </div>
+
+    <h2>3. Adding More Rows & Columns</h2>
+    <p>Each row uses <code>&lt;tr&gt;</code>, and each column inside that row uses <code>&lt;td&gt;</code>.</p>
+
+    <div class="example">
+      <pre>
+&lt;tr&gt;
+  &lt;td&gt;Charlie&lt;/td&gt;
+  &lt;td&gt;22&lt;/td&gt;
+  &lt;td&gt;Tokyo&lt;/td&gt;
+&lt;/tr&gt;
+      </pre>
+    </div>
+
+
+
+    <p id="np">Next Lesson → <a href="07-html-forms-explained.html">HTML Forms Explained</a></p>
+    <p id="np">Previous Lesson → <a href="05-html-lists.html">HTML Lists (Ordered & Unordered)</a></p>
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+
+
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

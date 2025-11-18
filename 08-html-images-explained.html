@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Images Explained | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML images in a simple way. Understand img tag, src, alt, width, height, and linking images with live preview.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/images.html">
+  <meta name="keywords" content="HTML images, img tag, src, alt, width, height, HTML links, ASWCode HTML tutorial">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 { color: #00bcd4; font-size: 2em; }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3 { color: #0f172a; margin-bottom: 10px; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; margin-top: 25px; }
+    h3 { font-size: 1.2em; margin-top: 20px; }
+
+   p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+     a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+    code { background: #e2e8f0; padding: 2px 5px; border-radius: 4px; }
+
+    .example { background: #f8fafc; padding: 10px 15px; border-radius: 10px; margin: 15px 0; overflow-x: auto; }
+
+    .live-preview { background: #f1f5f9; padding: 15px; border-radius: 10px; margin: 10px 0 30px 0; text-align: center; }
+    .live-preview img { max-width: 100%; height: auto; border-radius: 8px; }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+   footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+    }
+
+   /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <main>
+    <h1>HTML Images</h1>
+    <p>Images make websites look nice. In HTML, we use the <code>&lt;img&gt;</code> tag to show images.</p>
+
+    <!-- 1. BASIC IMAGE TAG -->
+    <h2>1. Basic Image Tag</h2>
+    <p>Use <code>&lt;img&gt;</code> with <code>src</code> (image URL) and <code>alt</code> (description):</p>
+    <div class="example">
+<pre>
+&lt;img src="images/nature-forest.png" alt="Green Forest"&gt;
+</pre>
+    </div>
+    <h3>Live Preview:</h3>
+    <div class="live-preview">
+      <img src="images/nature-forest.png" alt="Green Forest">
+    </div>
+
+    <!-- 2. ALT ATTRIBUTE -->
+    <h2>2. Alt Attribute</h2>
+    <p>The <code>alt</code> text is shown if the image cannot load. It helps users who cannot see images.</p>
+    <div class="example">
+<pre>
+&lt;img src="images/mountain-view.png" alt="Beautiful Mountain View"&gt;
+</pre>
+    </div>
+    <h3>Live Preview:</h3>
+    <div class="live-preview">
+      <img src="images/mountain-view.png" alt="Beautiful Mountain View">
+    </div>
+
+    <!-- 3. IMAGE SIZE -->
+    <h2>3. Image Size (Width & Height)</h2>
+    <p>You can make the image bigger or smaller using <code>width</code> and <code>height</code>:</p>
+    <div class="example">
+<pre>
+&lt;img src="images/sunset-city.png" alt="City Sunset" width="300" height="200"&gt;
+</pre>
+    </div>
+    <h3>Live Preview:</h3>
+    <div class="live-preview">
+      <img src="images/sunset-city.png" alt="City Sunset" width="300" height="200">
+    </div>
+
+    <!-- 4. LINKING AN IMAGE -->
+    <h2>4. Linking an Image</h2>
+    <p>You can make an image clickable by wrapping it in an <code>&lt;a&gt;</code> tag:</p>
+    <div class="example">
+<pre>
+&lt;a href="https://aswcode.com"&gt;
+  &lt;img src="images/fresh-fruits.png" alt="Fresh Fruits"&gt;
+&lt;/a&gt;
+</pre>
+    </div>
+    <h3>Live Preview:</h3>
+    <div class="live-preview">
+      <a href="https://aswcode.com" target="_blank">
+        <img src="images/fresh-fruits.png" alt="Fresh Fruits">
+      </a>
+    </div>
+
+    <p id="np">Next Lesson → <a href="09-html-links.html">HTML Links</a></p>
+    <p id="np">Previous Lesson → <a href="07-html-forms-explained.html">HTML Forms</a></p>
+  </main>
+
+  <a href="html-lessons.html" class="floating-back">&larr; Back</a>
+
+  <footer>
+    <div class="footer-bottom">
+      © 2025 ASWCode. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

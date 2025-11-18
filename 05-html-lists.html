@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HTML Lists (Ordered & Unordered) | ASWCode Tutorials</title>
+  <meta name="description" content="Learn about HTML lists — ordered, unordered, and list items. Understand how to use &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags with clear examples for beginners.">
+  <meta name="keywords" content="HTML lists, unordered list, ordered list, ul tag, ol tag, li tag, ASWCode HTML basics">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/lists.html" />
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="HTML Lists (Ordered & Unordered) | ASWCode Tutorials">
+  <meta property="og:description" content="Learn about HTML lists — ordered, unordered, nested lists, and numbering types with &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/lists.html">
+  <meta property="og:image" content="https://aswcode.com/assets/og/html-lists.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Lists (Ordered & Unordered) | ASWCode">
+  <meta name="twitter:description" content="Learn how to create HTML lists with &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags.">
+  <meta name="twitter:image" content="https://aswcode.com/assets/og/html-lists.png">
+
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "HTML Lists (Ordered & Unordered)",
+    "description": "Learn about HTML lists including unordered, ordered, nested lists, and list attributes.",
+    "author": { "@type": "Person", "name": "ASWCode" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ASWCode",
+      "logo": { "@type": "ImageObject", "url": "https://aswcode.com/assets/logo.png" }
+    },
+    "url": "https://aswcode.com/tutorials/html/lists.html"
+  }
+  </script>
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 { color: #00bcd4; }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    ul, ol {
+      margin: 15px 0 15px 30px;
+    }
+
+    
+     a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+    }
+    .footer-bottom {
+      margin-top: 30px;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    
+
+ /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Tutorial -->
+  <main>
+    <h1>HTML Lists (Ordered & Unordered)</h1>
+    <p>Lists are used to display items in order — like a shopping list or steps to follow. HTML gives us two types of lists.</p>
+
+
+
+    <h2>1. Unordered Lists (&lt;ul&gt;)</h2>
+    <p>Unordered lists display bullet points. Each item uses the <code>&lt;li&gt;</code> tag.</p>
+
+    <div class="example">
+<pre>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+
+    <div class="example">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+
+    <h2>2. Ordered Lists (&lt;ol&gt;)</h2>
+    <p>Ordered lists show numbers.</p>
+
+    <div class="example">
+<pre>
+&lt;ol&gt;
+  &lt;li&gt;Open your code editor&lt;/li&gt;
+  &lt;li&gt;Create an HTML file&lt;/li&gt;
+  &lt;li&gt;Start coding!&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+    </div>
+
+    <div class="example">
+      <ol>
+        <li>Open your code editor</li>
+        <li>Create an HTML file</li>
+        <li>Start coding!</li>
+      </ol>
+    </div>
+
+    <h2>3. Nested Lists</h2>
+    <p>A list inside another list.</p>
+
+    <div class="example">
+<pre>
+&lt;ul&gt;
+  &lt;li&gt;Frontend
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Backend&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+
+    <div class="example">
+      <ul>
+        <li>Frontend
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </li>
+        <li>Backend</li>
+      </ul>
+    </div>
+
+    <h2>4. Changing Number Style</h2>
+    <p>Change numbering using <code>type</code>:</p>
+
+    <div class="example">
+<pre>
+&lt;ol type="A"&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Cherry&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+    </div>
+
+    <div class="example">
+      <ol type="A">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+      </ol>
+    </div>
+
+    <ul>
+      <li><code>type="1"</code> → Numbers</li>
+      <li><code>type="A"</code> → Capital letters</li>
+      <li><code>type="a"</code> → Small letters</li>
+      <li><code>type="I"</code> → Roman numerals</li>
+      <li><code>type="i"</code> → Small Roman numerals</li>
+    </ul>
+
+  
+    <p id="np">Next Lesson →<a href="06-html-tables.html">HTML Tables </a></p>
+    <p id="np">Previous Lesson →<a href="04-html-comments-and-spacing.html">HTML Comments and Spacing</a></p>
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

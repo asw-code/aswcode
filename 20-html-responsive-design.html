@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Responsive Design | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML responsive design easily. Make your website look great on all devices using meta viewport and media queries. Examples included.">
+  <meta name="keywords" content="HTML responsive design, mobile friendly, tablet friendly, media queries, viewport, ASWCode tutorial">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/responsive-design.html">
+
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="HTML Responsive Design | ASWCode Tutorials">
+  <meta property="og:description" content="Learn HTML responsive design easily. Make your website look great on all devices using meta viewport and media queries.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/responsive-design.html">
+  <meta property="og:image" content="https://aswcode.com/assets/favicon.png">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 { color: #00bcd4; font-size: 2rem; }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 { color: #0f172a; margin-bottom: 10px; }
+     p { margin-bottom: 15px; font-size: 1rem; }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    code { background: #e2e8f0; padding: 2px 5px; border-radius: 4px; }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+      text-align:center;
+    }
+
+    .container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+    .box { background: #0ea5e9; color: white; padding: 20px; flex: 1 1 200px; text-align: center; border-radius: 8px; }
+
+    
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+   footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+    /* Responsive Media Queries */
+    @media only screen and (max-width: 600px) {
+      .box { flex: 1 1 100%; }
+      main { margin: 20px; padding: 25px; }
+      
+      body { font-size: 14px; }
+    
+    h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      .box { flex: 1 1 45%; }
+      main { padding: 30px; }
+    
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+
+    @media only screen and (min-width: 901px) {
+      .box { flex: 1 1 30%; }
+    
+    }
+    .device-simulator {
+      border: 2px dashed #0ea5e9;
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 10px;
+      overflow-x: auto;
+      background: #f1f5f9;
+      text-align: center;
+    }
+    .device-header { font-weight: 600; margin-bottom: 10px; }
+    .device-frame { border: 2px solid #0284c7; border-radius: 6px; padding: 10px; background: #ffffff; margin: auto; }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>HTML Responsive Design</h1>
+    <p>Responsive design ensures your website **looks good on all devices**: desktop, tablet, and mobile.</p>
+
+
+
+    <h2>1. Meta Viewport</h2>
+    <p>Add this in the <code>&lt;head&gt;</code> to tell the browser to fit the screen width:</p>
+    <div class="example">
+<pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</pre>
+    </div>
+
+    <h2>2. Flexible Layout Example</h2>
+    <p>Here are 3 boxes. They adjust automatically on different devices:</p>
+    <div class="example">
+<pre>
+&lt;div class="container"&gt;
+  &lt;div class="box"&gt;Box 1&lt;/div&gt;
+  &lt;div class="box"&gt;Box 2&lt;/div&gt;
+  &lt;div class="box"&gt;Box 3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+
+    <!-- Device Simulator -->
+    <div class="device-simulator">
+      <div class="device-header">Mobile View (≤600px)</div>
+      <div class="device-frame" style="width: 360px;">
+        <div class="container">
+          <div class="box">Box 1</div>
+          <div class="box">Box 2</div>
+          <div class="box">Box 3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="device-simulator">
+      <div class="device-header">Tablet View (601px–900px)</div>
+      <div class="device-frame" style="width: 768px;">
+        <div class="container">
+          <div class="box">Box 1</div>
+          <div class="box">Box 2</div>
+          <div class="box">Box 3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="device-simulator">
+      <div class="device-header">Desktop View (≥901px)</div>
+      <div class="device-frame" style="width: 1200px;">
+        <div class="container">
+          <div class="box">Box 1</div>
+          <div class="box">Box 2</div>
+          <div class="box">Box 3</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>3. Flexible Images</h2>
+    <p>Images also adjust automatically on all devices:</p>
+    <div class="example">
+<pre>
+&lt;img src="images/fresh-fruits.png" alt="Sample" style="max-width:100%; height:auto;"&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <img src="images/fresh-fruits.png" alt="Sample" style="max-width:100%; height:auto;">
+    </div>
+
+    <h2>4. Media Queries</h2>
+    <p>Media queries allow you to **change styles** based on device width.</p>
+
+    
+    <p  id="np">Next Lesson → <a href="21-html-computer-code.html">HTML Computer Code Elements</a></p>
+    <p  id="np">Previous Lesson → <a href="19-html-iframe.html">HTML &lt;iframe&gt; Element</a></p>
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

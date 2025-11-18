@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HTML Links Explained | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML links in a simple way. Understand a tag, href, target, and linking images with live examples.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/links.html">
+  <meta name="keywords" content="HTML links, a tag, href, target, linking images, ASWCode HTML tutorial">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+      
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 2em;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; margin-top: 25px; }
+    h3 { font-size: 1.2em; margin-top: 20px; }
+
+   p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+      text-align: center;
+    }
+
+    .live-preview a {
+      font-weight: 600;
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    .live-preview a:hover { text-decoration: underline; }
+    .live-preview img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 5px 0;
+    }
+
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+
+    /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+    
+   /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <main>
+    <h1>HTML Links </h1>
+    <p>Links allow users to go from one page to another. In HTML, we use the <code>&lt;a&gt;</code> tag to create links.</p>
+
+   
+    <h2>1. Basic Link</h2>
+    <p>The <code>&lt;a&gt;</code> tag uses <code>href</code> to specify the link:</p>
+    <div class="example">
+<pre>
+&lt;a href="https://aswcode.com"&gt;Visit ASWCode&lt;/a&gt;
+</pre>
+    </div>
+    <h3>Live Preview:</h3>
+    <div class="live-preview">
+      <a href="https://aswcode.com" target="_blank" rel="noopener noreferrer">Visit ASWCode</a>
+    </div>
+
+    <h2>2. Open Link in New Tab</h2>
+    <p>Use <code>target="_blank"</code> to open the link in a new tab:</p>
+    <div class="example">
+<pre>
+&lt;a href="https://aswcode.com" target="_blank"&gt;Visit ASWCode in New Tab&lt;/a&gt;
+</pre>
+    </div>
+    <h3>Live Preview:</h3>
+    <div class="live-preview">
+      <a href="https://aswcode.com" target="_blank" rel="noopener noreferrer">Visit ASWCode in New Tab</a>
+    </div>
+
+    <h2>3. Linking Images</h2>
+    <p>You can make an image clickable by putting it inside an <code>&lt;a&gt;</code> tag:</p>
+    <div class="example">
+<pre>
+&lt;a href="https://aswcode.com" target="_blank"&gt;
+  &lt;img src="images/nature-forest.png" alt="Nature"&gt;
+&lt;/a&gt;
+</pre>
+    </div>
+    <h3>Live Preview:</h3>
+    <div class="live-preview">
+      <a href="https://aswcode.com" target="_blank" rel="noopener noreferrer">
+        <img src="images/nature-forest.png" alt="Nature">
+      </a>
+    </div>
+
+    <h2>4. Internal Link</h2>
+    <p>Link to another page on your own website:</p>
+    <div class="example">
+<pre>
+&lt;a href="02-html-tags.html"&gt;Go to HTML Tags Lesson&lt;/a&gt;
+</pre>
+    </div>
+    <h3>Live Preview:</h3>
+    <div class="live-preview">
+      <a href="02-html-tags.html">Go to HTML Tags Lesson</a>
+    </div>
+
+   
+
+    <p id="np">Next Lesson → <a href="10-style-attribute.html">HTML Style Attribute </a></p>
+    <p id="np">Previous Lesson → <a href="08-html-images-explained.html">HTML Images </a></p>
+
+  </main>
+
+  <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+ 
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

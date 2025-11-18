@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>HTML Attributes Explained | ASWCode Tutorials</title>
+  <meta name="description" content="Learn what HTML attributes are, how they work, and how to use them with examples. Understand href, src, alt, title, id, class, and style in simple steps.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/attributes.html" />
+  <meta name="keywords" content="HTML attributes, HTML basics, href, src, alt, id, class, style, ASWCode tutorials">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+     background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+    }
+
+     main {
+      max-width: 900px;
+      width: 90%;
+      margin: 3rem auto;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+      font-size: 0.95em;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+   
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <main>
+    <h1>HTML Attributes </h1>
+    <p>HTML attributes give extra information about an element. They are always written inside the opening tag and usually come in name/value pairs like <code>name="value"</code>.</p>
+
+   
+
+    <h2>1. What Are Attributes?</h2>
+    <p>Attributes work like settings that control how an element behaves or displays. For example, links need a URL, and images need a file source — attributes make that possible.</p>
+
+    <pre>&lt;tagname attribute="value"&gt;Content&lt;/tagname&gt;</pre>
+
+    <p>Example:</p>
+    <pre>&lt;a href="https://aswcode.com"&gt;Visit ASWCode&lt;/a&gt;</pre>
+
+    <p>Here, <code>href</code> is the attribute, and <code>"https://aswcode.com"</code> is its value.</p>
+
+   
+    <h2>2. Common HTML Attributes</h2>
+
+    <h3>✅ href — Used in Links</h3>
+    <p>Used inside the <code>&lt;a&gt;</code> tag to define where the link goes.</p>
+    <pre>&lt;a href="https://aswcode.com"&gt;Go to ASWCode&lt;/a&gt;</pre>
+    <p><strong>Tip:</strong> Add <code>target="_blank"</code> to open in a new tab.</p>
+
+    <h3>✅ src — Used in Images or Scripts</h3>
+    <p>Tells the browser where a file is located.</p>
+    <pre>
+&lt;img src="/images/html-logo.png" alt="HTML Logo" /&gt;
+&lt;script src="/js/main.js"&gt;&lt;/script&gt;
+    </pre>
+
+    <h3>✅ alt — For Image Description</h3>
+    <p>Helpful for accessibility and SEO. Shown if the image fails to load.</p>
+    <pre>&lt;img src="logo.png" alt="ASWCode company logo" /&gt;</pre>
+
+    <h3>✅ title — Shows Tooltip</h3>
+    <p>Displays a tooltip on hover.</p>
+    <pre>&lt;p title="This is a tooltip"&gt;Hover over me!&lt;/p&gt;</pre>
+
+    <h3>✅ id — Unique Identifier</h3>
+    <p>Used to uniquely reference an element for CSS or JavaScript.</p>
+    <pre>&lt;h2 id="main-title"&gt;Welcome to ASWCode&lt;/h2&gt;</pre>
+
+    <h3>✅ class — Group Elements</h3>
+    <p>Apply the same styling to multiple elements.</p>
+    <pre>
+&lt;p class="note"&gt;This is a note.&lt;/p&gt;
+&lt;p class="note"&gt;Another note.&lt;/p&gt;
+    </pre>
+
+    <h3>✅ style — Inline CSS</h3>
+    <p>Used for quick styling (not recommended for large projects).</p>
+    <pre>&lt;p style="color: blue; font-size: 18px;"&gt;This text is blue.&lt;/p&gt;</pre>
+
+    <h2>3. Combine Attributes</h2>
+    <p>You can use multiple attributes within a single tag.</p>
+    <pre>&lt;img src="photo.jpg" alt="My photo" width="200" height="150" /&gt;</pre>
+
+   
+    <p id="np">Next Lesson → <a href="04-html-comments-and-spacing.html">HTML Comments and Spacing</a></p>
+    <p id="np">Previous Lesson →<a href="02-html-tags.html"> Understanding HTML Tags</a></p>
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

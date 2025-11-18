@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Computer Code Elements | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML code elements like code, pre, kbd, samp, var in a very simple way with examples.">
+  <meta name="keywords" content="HTML code elements, code tag, pre tag, kbd tag, samp tag, var tag, ASWCode tutorial">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/computer-code.html">
+
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="HTML Computer Code Elements | ASWCode Tutorials">
+  <meta property="og:description" content="Learn HTML code elements like code, pre, kbd, samp, var in a very simple way with examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/computer-code.html">
+  <meta property="og:image" content="https://aswcode.com/assets/favicon.png">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 { color: #00bcd4; font-size: 2rem; }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 { color: #0f172a; margin-bottom: 10px; }
+    p { margin-bottom: 15px; font-size: 1rem; }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    code { background: #e2e8f0; padding: 2px 5px; border-radius: 4px; font-family: monospace; }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+      text-align: center;
+    }
+
+    
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+    /* Responsive Design */
+   /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Tutorial -->
+  <main>
+    <h1>HTML Computer Code Elements</h1>
+    <p>HTML provides several tags to display computer code or text that represents programming or system input/output.</p>
+
+    
+
+    <h2>1. &lt;code&gt; — Inline Code</h2>
+    <p>Use <code>&lt;code&gt;</code> to show small snippets of code inside a paragraph:</p>
+    <div class="example">
+<pre>
+To display a heading in HTML, use &lt;code&gt;&lt;h1&gt;Hello&lt;/h1&gt;&lt;/code&gt;.
+</pre>
+    </div>
+    <div class="live-preview">
+      To display a heading in HTML, use <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>.
+    </div>
+
+    <h2>2. &lt;pre&gt; — Preformatted Text</h2>
+    <p>Use <code>&lt;pre&gt;</code> to preserve <strong>spaces and line breaks</strong>. Perfect for larger code blocks:</p>
+    <div class="example">
+<pre>
+&lt;pre&gt;
+function greet() {
+  console.log("Hello, World!");
+}
+&lt;/pre&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+<pre>
+function greet() {
+  console.log("Hello, World!");
+}
+</pre>
+    </div>
+
+    <h2>3. &lt;kbd&gt; — Keyboard Input</h2>
+    <p>Use <code>&lt;kbd&gt;</code> to show keyboard keys:</p>
+    <div class="example">
+<pre>
+Press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt; to copy.
+</pre>
+    </div>
+    <div class="live-preview">
+      Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
+    </div>
+
+    <h2>4. &lt;samp&gt; — Sample Output</h2>
+    <p>Use <code>&lt;samp&gt;</code> to show output from a program or system:</p>
+    <div class="example">
+<pre>
+&lt;samp&gt;Hello, World!&lt;/samp&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <samp>Hello, World!</samp>
+    </div>
+
+    <h2>5. &lt;var&gt; — Variable</h2>
+    <p>Use <code>&lt;var&gt;</code> to display a variable name:</p>
+    <div class="example">
+<pre>
+let &lt;var&gt;x&lt;/var&gt; = 10;
+</pre>
+    </div>
+    <div class="live-preview">
+      let <var>x</var> = 10;
+    </div>
+
+    <h2>6. &lt;s&gt; — Strikethrough Text</h2>
+    <p>Use <code>&lt;s&gt;</code> to show deleted or removed text:</p>
+    <div class="example">
+<pre>
+&lt;s&gt;Old Code&lt;/s&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <s>Old Code</s>
+    </div>
+
+   
+
+    <p  id="np">Next Lesson → <a href="22-html-semantic-elements.html">HTML Semantic Elements</a></p>
+    <p  id="np">Previous Lesson → <a href="20-html-responsive-design.html">HTML Responsive Design</a></p>
+
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

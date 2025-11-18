@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Understanding HTML Tags | ASWCode Tutorials</title>
+  <meta name="description" content="Learn what HTML tags are and how to use them — including headings, paragraphs, links, images, and divs — with simple explanations and examples.">
+  <meta name="keywords" content="HTML tags, HTML tutorial, headings, paragraphs, links, images, div, HTML basics, ASWCode">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/02-html-tags.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      width: 90%;
+      margin: 3rem auto;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.25rem;
+    }
+
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    
+
+    #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 0.5rem;
+      color: #777;
+      font-size: 0.875rem;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      margin: 1rem 0;
+    }
+
+   /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Tutorial -->
+  <main>
+    <h1>Understanding HTML Tags</h1>
+    <p>In HTML, <strong>tags</strong> are used to mark or define different parts of a webpage. Tags tell the browser what each part of the page means — for example, a heading, paragraph, image, or link.</p>
+
+    <h2>1. What Are HTML Tags?</h2>
+    <p>HTML tags are always written inside <code>&lt;&gt;</code> (angle brackets). Most tags come in pairs — an <strong>opening tag</strong> and a <strong>closing tag</strong>.</p>
+
+    <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+    </pre>
+
+    <p>Here, <code>&lt;p&gt;</code> starts the paragraph and <code>&lt;/p&gt;</code> ends it.</p>
+
+    <h2>2. Headings: &lt;h1&gt; to &lt;h6&gt;</h2>
+    <p>Headings are used to give titles and organize content. There are 6 heading levels — <code>&lt;h1&gt;</code> is the largest, and <code>&lt;h6&gt;</code> is the smallest.</p>
+
+    <div class="example">
+      <pre>
+&lt;h1&gt;This is Heading 1&lt;/h1&gt;
+&lt;h2&gt;This is Heading 2&lt;/h2&gt;
+&lt;h3&gt;This is Heading 3&lt;/h3&gt;
+&lt;h4&gt;This is Heading 4&lt;/h4&gt;
+&lt;h5&gt;This is Heading 5&lt;/h5&gt;
+&lt;h6&gt;This is Heading 6&lt;/h6&gt;
+      </pre>
+    </div>
+
+    <p>When you open this in a browser, each heading gets smaller. Use:</p>
+    <ul>
+      <li><strong>&lt;h1&gt;</strong> for the main page title (only one per page).</li>
+      <li><strong>&lt;h2&gt;</strong> for main sections.</li>
+      <li><strong>&lt;h3&gt;</strong> to &lt;h6&gt; for sub-sections or details.</li>
+    </ul>
+
+    <h2>3. Paragraphs: &lt;p&gt;</h2>
+    <p>The <code>&lt;p&gt;</code> tag defines a block of text. It’s used for normal reading text like explanations, introductions, and articles.</p>
+
+    <div class="example">
+      <pre>
+&lt;p&gt;HTML is used to create webpages and structure content.&lt;/p&gt;
+      </pre>
+    </div>
+
+    <h2>4. Links: &lt;a&gt;</h2>
+    <p>The <code>&lt;a&gt;</code> tag creates a link to another page or website. Use the <code>href</code> attribute to specify the link.</p>
+
+    <div class="example">
+      <pre>
+&lt;a href="https://aswcode.com"&gt;Visit ASWCode&lt;/a&gt;
+      </pre>
+    </div>
+
+    <p>This creates a clickable link to ASWCode. You can open links in a new tab using <code>target="_blank"</code>:</p>
+
+    <pre>
+&lt;a href="https://aswcode.com" target="_blank"&gt;Open in New Tab&lt;/a&gt;
+    </pre>
+
+    <h2>5. Images: &lt;img&gt;</h2>
+    <p>The <code>&lt;img&gt;</code> tag displays an image. It’s self-closing and requires important attributes:</p>
+    <ul>
+      <li><strong>src</strong> — image file path or URL</li>
+      <li><strong>alt</strong> — alternative text (for SEO & accessibility)</li>
+      <li><strong>width</strong> / <strong>height</strong> — optional image sizing</li>
+    </ul>
+
+    <div class="example">
+      <pre>
+&lt;img src="/images/html-logo.png" alt="HTML Logo" width="150" /&gt;
+      </pre>
+    </div>
+
+    <h2>6. Div: &lt;div&gt;</h2>
+    <p>The <code>&lt;div&gt;</code> tag is a container to group elements. It has no visual effect by itself but is useful with CSS for layout.</p>
+
+    <div class="example">
+      <pre>
+&lt;div&gt;
+  &lt;h2&gt;About ASWCode&lt;/h2&gt;
+  &lt;p&gt;ASWCode provides free web development tutorials and code snippets.&lt;/p&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+
+    <p id="np">Next Lesson → <a href="03-html-attributes.html">HTML Attributes </a></p>
+    <p id="np">Previous Lesson → <a href="01-html-basics.html">HTML Basics for Beginners</a></p>
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

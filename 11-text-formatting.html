@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Text Formatting | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML text formatting with bold, italic, underline, mark, small, deleted, inserted, subscript, superscript text. Live examples included.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/text-formatting.html">
+  <meta name="keywords" content="HTML text formatting, bold, italic, underline, mark, small, delete, insert, subscript, superscript, ASWCode HTML tutorial">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+     body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 { color: #00bcd4; font-size: 2em; }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 { color: #0f172a; margin-bottom: 10px; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; margin-top: 25px; }
+    h3 { font-size: 1.2em; margin-top: 20px; }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    code { background: #e2e8f0; padding: 2px 5px; border-radius: 4px; }
+    .example { background: #f8fafc; padding: 10px 15px; border-radius: 10px; margin: 15px 0; overflow-x: auto; }
+    
+    .live-preview { background: #f1f5f9; padding: 15px; border-radius: 10px; margin: 10px 0 30px 0; text-align: center; }
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+      a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <main>
+    <h1>HTML Text Formatting</h1>
+    <p>HTML provides special tags to format text in different ways. Here is a simple explanation of each:</p>
+
+   
+
+    <h2>1. Bold & Important Text</h2>
+    <p><code>&lt;b&gt;</code> makes text bold. <code>&lt;strong&gt;</code> makes text important.</p>
+    <div class="example">
+<pre>
+&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt; text.&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>This is <b>bold</b> text.</p>
+      <p>This is <strong>important</strong> text.</p>
+    </div>
+
+    <h2>2. Italic & Emphasized Text</h2>
+    <p><code>&lt;i&gt;</code> makes text italic. <code>&lt;em&gt;</code> emphasizes text.</p>
+    <div class="example">
+<pre>
+&lt;p&gt;This is &lt;i&gt;italic&lt;/i&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>This is <i>italic</i> text.</p>
+      <p>This is <em>emphasized</em> text.</p>
+    </div>
+
+    <h2>3. Underline, Highlight & Small Text</h2>
+    <p><code>&lt;u&gt;</code> underlines text. <code>&lt;mark&gt;</code> highlights text. <code>&lt;small&gt;</code> makes text smaller.</p>
+    <div class="example">
+<pre>
+&lt;p&gt;This is &lt;u&gt;underlined&lt;/u&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;mark&gt;highlighted&lt;/mark&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;small&gt;small&lt;/small&gt; text.&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>This is <u>underlined</u> text.</p>
+      <p>This is <mark>highlighted</mark> text.</p>
+      <p>This is <small>small</small> text.</p>
+    </div>
+
+    <h2>4. Deleted & Inserted Text</h2>
+    <p><code>&lt;del&gt;</code> shows deleted text. <code>&lt;ins&gt;</code> shows inserted text.</p>
+    <div class="example">
+<pre>
+&lt;p&gt;This is &lt;del&gt;deleted&lt;/del&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;ins&gt;inserted&lt;/ins&gt; text.&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>This is <del>deleted</del> text.</p>
+      <p>This is <ins>inserted</ins> text.</p>
+    </div>
+
+    <h2>5. Subscript & Superscript</h2>
+    <p><code>&lt;sub&gt;</code> shows subscript text. <code>&lt;sup&gt;</code> shows superscript text.</p>
+    <div class="example">
+<pre>
+&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O is water.&lt;/p&gt;
+&lt;p&gt;E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>H<sub>2</sub>O is water.</p>
+      <p>E = mc<sup>2</sup></p>
+    </div>
+
+   
+
+    <p  id="np">Next Lesson → <a href="12-quotations-special-elements.html">HTML Quotations & Special Elements</a></p>
+    <p  id="np">Previous Lesson → <a href="10-style-attribute.html">HTML Style Attribute</a></p>
+
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

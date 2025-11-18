@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Quotations & Special Elements | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML quotation and special elements: blockquote, q, abbr, address, cite, bdo. Simple explanations with live examples.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/quotations-abbr-address.html">
+  <meta name="keywords" content="HTML blockquote, q, abbr, address, cite, bdo, ASWCode tutorial">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+     body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 2em;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    
+
+      a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+
+   /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Tutorial -->
+  <main>
+    <h1>HTML Quotations & Special Elements</h1>
+    <p>Learn how to use some special HTML elements for quotations, addresses, abbreviations, citations, and text direction.</p>
+
+   
+    <h2>1. Block Quotation &lt;blockquote&gt;</h2>
+    <p>Used for long quotes, usually on its own block.</p>
+    <div class="example">
+<pre>
+&lt;blockquote&gt;
+  "The journey of a thousand miles begins with a single step."
+&lt;/blockquote&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <blockquote>
+        "The journey of a thousand miles begins with a single step."
+      </blockquote>
+    </div>
+
+    <h2>2. Short Inline Quote &lt;q&gt;</h2>
+    <p>Used for short quotes inside text. Browser adds quotation marks automatically.</p>
+    <div class="example">
+<pre>
+&lt;p&gt;He said &lt;q&gt;HTML is fun!&lt;/q&gt; and smiled.&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>He said <q>HTML is fun!</q> and smiled.</p>
+    </div>
+
+    <h2>3. Abbreviation &lt;abbr&gt;</h2>
+    <p>Use <code>&lt;abbr&gt;</code> to show abbreviations. You can add a full form with the <code>title</code> attribute.</p>
+    <div class="example">
+<pre>
+&lt;p&gt;The &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; tutorial is easy.&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>The <abbr title="HyperText Markup Language">HTML</abbr> tutorial is easy.</p>
+    </div>
+
+    <h2>4. Address &lt;address&gt;</h2>
+    <p>Use <code>&lt;address&gt;</code> to display contact information or addresses.</p>
+    <div class="example">
+<pre>
+&lt;address&gt;
+  John Doe<br>
+  123 Main Street<br>
+  New York, USA
+&lt;/address&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <address>
+        John Doe<br>
+        123 Main Street<br>
+        New York, USA
+      </address>
+    </div>
+
+    <h2>5. Citation &lt;cite&gt;</h2>
+    <p>Use <code>&lt;cite&gt;</code> to reference the source of a quote, book, or article.</p>
+    <div class="example">
+<pre>
+&lt;p&gt;“Knowledge is power.” &lt;cite&gt;— Francis Bacon&lt;/cite&gt;&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>“Knowledge is power.” <cite>— Francis Bacon</cite></p>
+    </div>
+
+    <h2>6. Text Direction &lt;bdo&gt;</h2>
+    <p>Use <code>&lt;bdo&gt;</code> to override text direction. For example, right-to-left (rtl) or left-to-right (ltr).</p>
+    <div class="example">
+<pre>
+&lt;p&gt;Normal text: Hello!&lt;/p&gt;
+&lt;p&gt;Reversed text: &lt;bdo dir="rtl"&gt;Hello!&lt;/bdo&gt;&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p>Normal text: Hello!</p>
+      <p>Reversed text: <bdo dir="rtl">Hello!</bdo></p>
+    </div>
+
+    
+   <p  id="np">Next Lesson → <a href="13-html-colors.html">HTML Colors</a></p>
+    <p  id="np">Previous Lesson → <a href="11-text-formatting.html">HTML Text Formatting</a></p>
+
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

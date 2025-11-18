@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HTML Forms Explained | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML forms easily. Understand form tags, input fields, buttons, textarea, dropdown menus, and full examples with live previews.">
+  <meta name="keywords" content="HTML forms, input field, HTML button, textarea, select dropdown, HTML tutorial, ASWCode">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/forms.html">
+
+  <!-- Open Graph (SEO for Facebook & LinkedIn) -->
+  <meta property="og:title" content="HTML Forms Explained | ASWCode Tutorials">
+  <meta property="og:description" content="Understand HTML forms with simple explanations and live examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/forms.html">
+  <meta property="og:image" content="https://aswcode.com/assets/og-banner.png">
+
+  <!-- Twitter Card SEO -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Forms Explained | ASWCode Tutorials">
+  <meta name="twitter:description" content="Learn everything about HTML forms with examples and previews.">
+  <meta name="twitter:image" content="https://aswcode.com/assets/og-banner.png">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+      
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 { color: #00bcd4; }
+
+    main {
+      max-width: 980px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 35px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3 { margin-bottom: 8px; color: #0f172a; }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      max-width: 450px;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border-radius: 6px;
+      border: 1px solid #0f172a;
+      font-size: 1rem;
+    }
+
+    button {
+      cursor: pointer;
+      background: #00bcd4;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    button:hover { background: #0098ab; }
+
+    .example {
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 25px 0;
+      overflow-x: auto;
+    }
+
+   
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>ASWCode Tutorials</h1>
+  <p>Learn Web Development — From Basics to Advanced</p>
+</header>
+
+<main>
+  <h1>HTML Forms </h1>
+  <p>Forms are used to get user input — login forms, search bars, contact forms, and more.</p>
+
+
+
+  <h2>1. The Form Tag (&lt;form&gt;)</h2>
+  <p>The <code>&lt;form&gt;</code> tag is the main container for all form elements.</p>
+
+  <div class="example">
+    <pre>
+&lt;form&gt;
+&lt;/form&gt;
+    </pre>
+  </div>
+
+  <h3>Live Preview:</h3>
+  <div class="live-preview"><form><p>Form container — nothing inside yet</p></form></div>
+
+  <h2>2. Input Fields (&lt;input&gt;)</h2>
+  <p>Used for single-line text like names, emails, and passwords.</p>
+
+  <div class="example">
+    <pre>
+&lt;input type="text" placeholder="Your Name" /&gt;
+&lt;input type="email" placeholder="Your Email" /&gt;
+&lt;input type="password" placeholder="Your Password" /&gt;
+    </pre>
+  </div>
+
+  <h3>Live Preview:</h3>
+  <div class="live-preview">
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <input type="password" placeholder="Your Password">
+    </form>
+  </div>
+
+  <h2>3. Textarea (&lt;textarea&gt;)</h2>
+  <p>Used for large text inputs like messages.</p>
+
+  <div class="example">
+    <pre>
+&lt;textarea placeholder="Your Message"&gt;&lt;/textarea&gt;
+    </pre>
+  </div>
+
+  <h3>Live Preview:</h3>
+  <div class="live-preview"><form><textarea placeholder="Your Message"></textarea></form></div>
+
+  <h2>4. Dropdown (&lt;select&gt; &lt;option&gt;)</h2>
+  <p>Allows users to pick an option from a list.</p>
+
+  <div class="example">
+    <pre>
+&lt;select&gt;
+  &lt;option&gt;HTML&lt;/option&gt;
+  &lt;option&gt;CSS&lt;/option&gt;
+  &lt;option&gt;JavaScript&lt;/option&gt;
+&lt;/select&gt;
+    </pre>
+  </div>
+
+  <h3>Live Preview:</h3>
+  <div class="live-preview">
+    <form>
+      <select>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+      </select>
+    </form>
+  </div>
+
+  <h2>5. Buttons (&lt;button&gt;)</h2>
+  <p>Used to submit a form.</p>
+
+  <div class="example">
+    <pre>
+&lt;button type="submit"&gt;Send&lt;/button&gt;
+    </pre>
+  </div>
+
+  <h3>Live Preview:</h3>
+  <div class="live-preview"><form><button type="submit">Send</button></form></div>
+
+  <h2>6. Complete Mini Form</h2>
+
+  <div class="example">
+    <pre>
+&lt;form&gt;
+  &lt;input type="text" placeholder="Your Name" /&gt;
+  &lt;input type="email" placeholder="Your Email" /&gt;
+  &lt;textarea placeholder="Your Message"&gt;&lt;/textarea&gt;
+  &lt;select&gt;
+    &lt;option&gt;HTML&lt;/option&gt;
+    &lt;option&gt;CSS&lt;/option&gt;
+    &lt;option&gt;JavaScript&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+    </pre>
+  </div>
+
+  <h3>Live Preview:</h3>
+  <div class="live-preview">
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <select>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+      </select>
+      <button>Send</button>
+    </form>
+  </div>
+
+ 
+
+  <p id="np">Next Lesson → <a href="08-html-images-explained.html">HTML Images </a></p>
+  <p id="np">Previous Lesson → <a href="06-html-tables.html">HTML Tables </a></p>
+
+</main>
+
+ <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+
+<footer>
+  <div class="footer-bottom">
+    © 2025 ASWCode. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

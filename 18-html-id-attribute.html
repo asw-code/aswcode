@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML ID Attribute | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML id attribute easily. Use id to style or select a unique element with CSS or JavaScript. Examples and live preview included.">
+  <meta name="keywords" content="HTML id attribute, CSS styling, unique element, JavaScript selection, ASWCode tutorial">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/id-attribute.html">
+  
+  <meta property="og:title" content="HTML ID Attribute | ASWCode Tutorials">
+  <meta property="og:description" content="Learn HTML id attribute easily. Use id to style or select a unique element with CSS or JavaScript. Examples and live preview included.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/id-attribute.html">
+  <meta property="og:image" content="https://aswcode.com/assets/favicon.png">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 { color: #0f172a; margin-bottom: 10px; }
+    p { margin-bottom: 15px; font-size: 1rem; }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+    }
+
+    #unique-box {
+      background-color: #3b82f6;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+   
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>HTML ID Attribute</h1>
+    <p>The <code>id</code> attribute is used to give a <strong>unique identifier</strong> to an HTML element. Unlike a <code>class</code>, each id can be used only once per page. IDs are useful for CSS styling and JavaScript selection.</p>
+
+    
+
+    <h2>1. Basic Usage</h2>
+    <p>Assign an id to an element:</p>
+    <div class="example">
+<pre>
+&lt;div id="unique-box"&gt;
+  This is a unique div.
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <div id="unique-box">This is a unique div.</div>
+    </div>
+
+    <h2>2. Styling an ID with CSS</h2>
+    <p>Use <code>#id</code> selector in CSS:</p>
+    <div class="example">
+<pre>
+&lt;style&gt;
+  #unique-box {
+    background-color: #3b82f6;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+  }
+&lt;/style&gt;
+</pre>
+    </div>
+
+    <h2>3. Difference Between Class and ID</h2>
+    <ul>
+      <li><strong>Class:</strong> Can be used on multiple elements, use <code>.classname</code> in CSS.</li>
+      <li><strong>ID:</strong> Unique to one element, use <code>#id</code> in CSS.</li>
+    </ul>
+
+    <h2>4. Using ID in JavaScript</h2>
+    <p>Access an element with its id:</p>
+    <div class="example">
+<pre>
+&lt;script&gt;
+  const box = document.getElementById("unique-box");
+  box.style.fontWeight = "bold";
+&lt;/script&gt;
+</pre>
+    </div>
+
+    
+
+    <p  id="np">Next Lesson → <a href="19-html-iframe.html">HTML &lt;iframe&gt; Element</a></p>
+    <p  id="np">Previous Lesson → <a href="17-html-class-attribute.html">HTML Class Attribute</a></p>
+
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Colors | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML colors in a simple way. Use predefined color names, HEX, RGB, HSL, RGBA, HSLA with live examples for web design.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/colors.html">
+  <meta name="keywords" content="HTML colors, color names, HEX, RGB, HSL, RGBA, HSLA, ASWCode tutorial">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+     body {
+      font-family: 'Inter', sans-serif;
+     background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 2em;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+   p { margin-bottom: 15px; font-size: 1rem; }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #e2e8f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    .color-box {
+      padding: 20px;
+      margin: 10px 0;
+      color: #fff;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+     #np {
+      color: rgb(30, 224, 224);
+      font-weight: 600;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Tutorial -->
+  <main>
+    <h1>HTML Colors</h1>
+    <p>HTML colors are used to change text or background colors. You can use <strong>predefined color names</strong> or <strong>color codes</strong> like HEX, RGB, HSL, RGBA, and HSLA.</p>
+
+    
+
+    <h2>1. Predefined Color Names</h2>
+    <p>HTML has many color names like red, blue, green, orange, etc.</p>
+    <div class="example">
+<pre>
+&lt;p style="color:red"&gt;This is red text.&lt;/p&gt;
+&lt;p style="background-color:blue; color:white"&gt;Blue background&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="color:red">This is red text.</p>
+      <p style="background-color:blue; color:white">Blue background</p>
+    </div>
+
+    <h2>2. HEX Colors</h2>
+    <p>Use <code>#RRGGBB</code> to define colors in hexadecimal.</p>
+    <div class="example">
+<pre>
+&lt;p style="color:#ff5733"&gt;Orange color using HEX&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="color:#ff5733">Orange color using HEX</p>
+    </div>
+
+    <h2>3. RGB Colors</h2>
+    <p>Use <code>rgb(red, green, blue)</code> to define colors with numbers from 0-255.</p>
+    <div class="example">
+<pre>
+&lt;p style="color:rgb(0,128,0)"&gt;Green color using RGB&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="color:rgb(0,128,0)">Green color using RGB</p>
+    </div>
+
+    <h2>4. RGBA Colors</h2>
+    <p>RGBA is RGB with alpha (opacity). Value 0 = transparent, 1 = solid.</p>
+    <div class="example">
+<pre>
+&lt;p style="color:rgba(255,0,0,0.5)"&gt;Semi-transparent red&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="color:rgba(255,0,0,0.5)">Semi-transparent red</p>
+    </div>
+
+    <h2>5. HSL Colors</h2>
+    <p>HSL = Hue, Saturation, Lightness</p>
+    <div class="example">
+<pre>
+&lt;p style="color:hsl(200,100%,50%)"&gt;HSL blue&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="color:hsl(200,100%,50%)">HSL blue</p>
+    </div>
+
+    <h2>6. HSLA Colors</h2>
+    <p>HSLA is HSL with alpha (opacity).</p>
+    <div class="example">
+<pre>
+&lt;p style="color:hsla(120,100%,25%,0.5)"&gt;Semi-transparent dark green&lt;/p&gt;
+</pre>
+    </div>
+    <div class="live-preview">
+      <p style="color:hsla(120,100%,25%,0.5)">Semi-transparent dark green</p>
+    </div>
+
+   
+
+    <p  id="np">Next Lesson → <a href="14-html-block-inline.html">HTML Block and Inline Elements</a></p>
+    <p  id="np">Previous Lesson → <a href="12-quotations-special-elements.html">HTML Quotations & Special Elements</a></p>
+
+
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Entities | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML entities in a very simple way. Display special characters, symbols, and reserved characters using HTML entities.">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/html-entities.html">
+  <meta name="keywords" content="HTML entities, special characters, reserved characters, &amp;, &lt;, &gt;, &quot;, &copy;, ASWCode tutorial">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    /* HEADER */
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 { color: #00bcd4; }
+
+    /* MAIN */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 { color: #0f172a; margin-bottom: 10px; }
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+   
+
+    #np {
+        color: rgb(30, 224, 224);
+        font-weight: 600;
+        margin-top: 30px;
+        
+    }
+
+    .example,
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+   
+
+     /* ---------- Responsive Table ---------- */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #94a3b8;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0ea5e9;
+      color: white;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+     
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+
+    table{
+      font-size: 0.9em;
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 200px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ASWCode Tutorials</h1>
+    <p>Learn Web Development — From Basics to Advanced</p>
+  </header>
+
+  <!-- Main Tutorial -->
+  <main>
+    <h1>HTML Entities</h1>
+    <p>HTML entities are used to display <strong>special characters</strong> that HTML would normally treat as code. For example, &lt; or &amp;.</p>
+
+   
+
+    <h2>1. Reserved Characters</h2>
+    <p>Some characters like <code>&lt;</code> and <code>&gt;</code> are used in HTML code. To show them on the page, we use entities:</p>
+
+    <div class="live-preview">
+      &lt;p&gt;This is a paragraph&lt;/p&gt;
+    </div>
+
+    <h2>2. Common HTML Entities</h2>
+
+    <table>
+      <tr>
+        <th>Character</th>
+        <th>Entity Name</th>
+        <th>Entity Number</th>
+      </tr>
+      <tr><td>&lt;</td><td>&amp;lt;</td><td>&#60;</td></tr>
+      <tr><td>&gt;</td><td>&amp;gt;</td><td>&#62;</td></tr>
+      <tr><td>&amp;</td><td>&amp;amp;</td><td>&#38;</td></tr>
+      <tr><td>"</td><td>&amp;quot;</td><td>&#34;</td></tr>
+      <tr><td>©</td><td>&amp;copy;</td><td>&#169;</td></tr>
+      <tr><td>®</td><td>&amp;reg;</td><td>&#174;</td></tr>
+      <tr><td>™</td><td>&amp;trade;</td><td>&#8482;</td></tr>
+    </table>
+
+    <h2>3. Example in Paragraph</h2>
+    <div class="live-preview">
+      <p>Use &amp;lt;h1&amp;gt; for headings &amp; &amp;copy; 2025 ASWCode.</p>
+    </div>
+
+    <h2>4. Why Use HTML Entities?</h2>
+    <ul>
+      <li>Display reserved HTML characters like <code>&lt;</code>, <code>&gt;</code>, and <code>&amp;</code></li>
+      <li>Show special symbols like ©, ®, ™</li>
+      <li>Prevent breaking HTML code accidentally</li>
+    </ul>
+
+
+
+ <p  id="np">Next Lesson → <a href="24-html-symbols.html">HTML Symbols</a></p>
+    <p  id="np">Previous Lesson → <a href="22-html-semantic-elements.html">HTML Semantic Elements</a></p>
+
+  </main>
+
+   <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
