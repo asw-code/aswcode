@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASWCode | Snippets List</title>
+<title>ASWCode | HTML Tutorial</title>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
      crossorigin="anonymous"></script>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="Explore free HTML, CSS, and JavaScript snippets with live demos, code previews, and copy buttons. Enhance your frontend skills with CodeHub.">
-<meta name="keywords" content="HTML snippets, CSS snippets, JavaScript snippets, frontend code, UI components, web development, code examples">
+<meta name="description" content="Learn HTML Tutorial step-by-step with ASWCode. Access all HTML lessons from basics to advanced with live examples and explanations.">
+<meta name="keywords" content="HTML tutorial, HTML lessons, Learn HTML, HTML course, HTML for beginners, HTML examples, ASWCode HTML tutorial">
 <meta name="author" content="Achini Wanasinghe">
 
 <!-- Open Graph / Social Sharing -->
-<meta property="og:title" content="ASWCode | Free HTML, CSS & JS Snippets">
-<meta property="og:description" content="Browse a collection of free HTML, CSS, and JavaScript snippets with live demos. Copy code and learn frontend development with ASWCode.">
+<meta property="og:title" content="ASWCode | HTML Tutorial">
+<meta property="og:description" content="Complete HTML Tutorial with lessons from basics to advanced. Learn HTML easily with ASWCode.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aswcode.com/snippets.html">
+<meta property="og:url" content="https://aswcode.com/html-lessons.html">
 <meta property="og:image" content="https://aswcode.com/preview.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ASWCode | Free HTML, CSS & JS Snippets">
-<meta name="twitter:description" content="Explore free frontend code snippets with live demos, examples, and tutorials.">
+<meta name="twitter:title" content="ASWCode | HTML Tutorial">
+<meta name="twitter:description" content="Step-by-step HTML Tutorial from basics to advanced with examples.">
 <meta name="twitter:image" content="https://aswcode.com/preview.png">
 
 <!-- JSON-LD Structured Data -->
@@ -31,9 +31,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "ASWCode Snippets",
-  "url": "https://aswcode.com/snippets.html",
-  "description": "A collection of free HTML, CSS, and JavaScript code snippets with live demos and copy buttons.",
+  "name": "ASWCode HTML Tutorial",
+  "url": "https://aswcode.com/html-lessons.html",
+  "description": "Complete HTML Tutorial with examples and explanations.",
   "publisher": {
     "@type": "Organization",
     "name": "ASWCode",
@@ -54,8 +54,6 @@
 
   gtag('config', 'G-M22GBBYSJE');
 </script>
-
-
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
@@ -189,7 +187,7 @@ header {
   box-shadow: 0 0 15px #00eaff, 0 0 30px rgba(0,234,255,0.5);
 }
 
-/* ---------- SNIPPET LIST ---------- */
+/* ---------- LESSON LIST ---------- */
 .snippet-list {
   max-width: 650px;
   margin: 40px auto 80px;
@@ -271,17 +269,6 @@ header {
   100% { background-position: 0% 50%; }
 }
 
-/* ---------- AD SLOT ---------- */
-.ad-slot {
-  background: rgba(20, 20, 20, 0.85);
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  margin: 20px 0;
-  color: #888;
-  font-size: 0.9rem;
-}
-
 /* ---------- BACK TO TOP BUTTON ---------- */
 #backToTop {
   position: fixed;
@@ -310,40 +297,28 @@ header {
 }
 
 /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      .navbar {
-        padding: 15px 20px;
-      }
-
-      /* Show menu toggle */
-      .menu-toggle {
-        display: block;
-      }
-
-      /* Mobile menu centered */
-      .nav-links {
-        display: none; /* hidden by default */
-        flex-direction: column;
-        position: fixed;
-        top: 50%;       /* vertical center */
-        left: 50%;      /* horizontal center */
-        transform: translate(-50%, -50%);
-        background: rgb(10, 10, 10);
-        border-radius: 15px;
-        padding: 30px 20px;
-        width: 80%;
-        max-width: 300px;
-        align-items: center;
-        box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
-        z-index: 999;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-links li {
-        margin: 15px 0;
-      }
-    }
+@media (max-width: 768px) {
+  .navbar { padding: 15px 20px; }
+  .menu-toggle { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(10, 10, 10);
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 80%;
+    max-width: 300px;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+    z-index: 999;
+  }
+  .nav-links.active { display: flex; }
+  .nav-links li { margin: 15px 0; }
+}
 </style>
 </head>
 <body>
@@ -353,8 +328,8 @@ header {
     <a href="index.html" class="logo">ASWCode</a>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="html-tutorial.html" >HTML Tutorial</a></li>
-      <li><a href="snippets.html" class="active">Snippets</a></li>
+      <li><a href="html-tutorial.html" class="active">HTML Tutorial</a></li>
+      <li><a href="snippets.html">Snippets</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="blogs.html">Blogs</a></li>
       <li><a href="about.html">About</a></li>
@@ -366,38 +341,45 @@ header {
 </header>
 
 <section class="snippet-hero">
-  <h1>HTML, CSS, and JavaScript Code Snippets</h1>
-  <p>Click on a snippet to see the full code, live demo, and copy button.</p>
+  <h1>HTML Tutorial</h1>
+  <p>Step-by-step HTML tutorials from basics to advanced.</p>
 
   <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search snippets (e.g. navbar, button, card)...">
+    <input type="text" id="searchInput" placeholder="Search lessons (e.g. Forms, Images, Links)...">
   </div>
 </section>
 
 <section class="snippet-list" id="snippetList">
- <!--  <div class="ad-slot">Ad Placeholder (Top)</div> -->
-
-  <ol>
-    
-    <li><a href="glowing-animated-button.html"><span>Glowing Animated Button Using HTML & CSS</span></a></li>
-    <li><a href="typing-text-animation.html"><span>Typing Text Animation</span></a></li>
-    <li><a href="hover-lift-card.html"><span>Hover Lift Card Effect</span></a></li>
-    <li><a href="gradient-background-animation.html"><span>Gradient Background Animation</span></a></li>
-    <li><a href="gradient-button.html"><span>Gradient Button with Hover Effect</span></a></li>
-    
-
-  
-    <li><a href="glassmorphism-card.html"><span>Glassmorphism Card</span></a></li>
-    <li><a href="simple-toggle-button.html"><span>Simple Toggle Button</span></a></li>
-    <li><a href="dark-mode-toggle.html"><span>Dark Mode Toggle Button</span></a></li>
-    
-
-  
-   
-
-
-
-
+  <ol >
+    <li><a href="01-html-basics.html"><span>HTML Basics for Beginners</span></a></li>
+    <li><a href="02-html-tags.html"><span>Understanding HTML Tags</span></a></li>
+    <li><a href="03-html-attributes.html"><span>HTML Attributes</span></a></li>
+    <li><a href="04-html-comments-and-spacing.html"><span>HTML Comments and Spacing</span></a></li>
+    <li><a href="05-html-lists.html"><span>HTML Lists (Ordered & Unordered)</span></a></li>
+    <li><a href="06-html-tables.html"><span>HTML Tables</span></a></li>
+    <li><a href="07-html-forms-explained.html"><span>HTML Forms</span></a></li>
+    <li><a href="08-html-images-explained.html"><span>HTML Images</span></a></li>
+    <li><a href="09-html-links.html"><span>HTML Links</span></a></li>
+    <li><a href="10-style-attribute.html"><span>HTML Style Attribute</span></a></li>
+    <li><a href="11-text-formatting.html"><span>HTML Text Formatting</span></a></li>
+    <li><a href="12-quotations-special-elements.html"><span>HTML Quotations & Special Elements</span></a></li>
+    <li><a href="13-html-colors.html"><span>HTML Colors</span></a></li>
+    <li><a href="14-html-block-inline.html"><span>HTML Block and Inline Elements</span></a></li>
+    <li><a href="15-div-class-id.html"><span>HTML &lt;div&gt; Element</span></a></li>
+    <li><a href="16-html-span.html"><span>HTML &lt;span&gt; Element</span></a></li>
+    <li><a href="17-html-class-attribute.html"><span>HTML Class Attribute</span></a></li>
+    <li><a href="18-html-id-attribute.html"><span>HTML ID Attribute</span></a></li>
+    <li><a href="19-html-iframe.html"><span>HTML &lt;iframe&gt; Element</span></a></li>
+    <li><a href="20-html-responsive-design.html"><span>HTML Responsive Design</span></a></li>
+    <li><a href="21-html-computer-code.html"><span>HTML Computer Code Elements</span></a></li>
+    <li><a href="22-html-semantic-elements.html"><span>HTML Semantic Elements</span></a></li>
+    <li><a href="23-html-entities.html"><span>HTML Entities</span></a></li>
+    <li><a href="24-html-symbols.html"><span>HTML Symbols</span></a></li>
+    <li><a href="25-html-emojis.html"><span>Using Emojis in HTML</span></a></li>
+    <li><a href="26-html-encoding.html"><span>HTML Encoding (Character Sets)</span></a></li>
+    <li><a href="27-html-vs-xhtml.html"><span>HTML vs XHTML</span></a></li>
+    <li><a href="28-html-file-naming.html"><span>HTML File Naming</span></a></li>
+    <li><a href="29-html-keyboard-shortcuts.html"><span>HTML Keyboard Shortcut Cheat Sheet</span></a></li>
   </ol>
 </section>
 
@@ -410,24 +392,22 @@ header {
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
-    });
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
 
-    document.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
   if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
     navLinks.classList.remove('active');
   }
 });
-
-
 
 // Search filter logic
 const searchInput = document.getElementById('searchInput');
@@ -436,7 +416,6 @@ const items = snippetList.getElementsByTagName('li');
 
 searchInput.addEventListener('keyup', function() {
   const filter = this.value.toLowerCase().trim();
-
   for (let i = 0; i < items.length; i++) {
     const text = items[i].innerText.toLowerCase();
     items[i].style.display = text.includes(filter) ? 'flex' : 'none';
@@ -445,7 +424,6 @@ searchInput.addEventListener('keyup', function() {
 
 // Back to Top button
 const backToTop = document.getElementById('backToTop');
-
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
     backToTop.classList.add('show');
@@ -453,7 +431,6 @@ window.addEventListener('scroll', () => {
     backToTop.classList.remove('show');
   }
 });
-
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
