@@ -70,7 +70,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #050505, #0b0b0b);
+      background: #000;
       color: #fff;
       overflow-x: hidden;
     }
@@ -248,62 +248,68 @@
       animation: glowPulse 3s infinite alternate ease-in-out;
     }
 
-    /* ---------- FEATURE CARDS ---------- */
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 50px 20px;
-      margin-top: 100px;
-      margin-bottom: 100px;
-    }
-
-    .feature-card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      min-width: 250px;
-      max-width: 300px;
+   /* ---------- BLOG HERO ---------- */
+    .blog-hero {
       text-align: center;
-      border: 1px solid rgba(0, 234, 255, 0.2);
-      box-shadow: 0 4px 15px rgba(67, 66, 117, 0.3);
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(0, 188, 212, 0.8),
-                  0 0 25px rgba(0, 188, 212, 0.6),
-                  0 0 35px rgba(0, 188, 212, 0.4);
-    }
-
-    .feature-card h3 {
-      color: #00bcd4;
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-    }
-
-    .feature-card p {
-      color: #aaa;
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-    }
-
-    .feature-card a.btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 20px;
-      background: #00bcd4;
+      padding: 120px 20px 20px;
       color: #fff;
-      border-radius: 5px;
-      transition: 0.3s;
+    }
+    .blog-hero h3 {
+      font-size: 2rem;
+      color: #00eaff;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .blog-hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto 25px;
+      line-height: 1.6;
+    }
+
+    /* ---------- BLOG CARDS ---------- */
+    .blog-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+
+    .blog-card {
+      position: relative;
+      background: rgba(15, 15, 15, 0.85);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,234,255,0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+      text-decoration: none;
+      margin: 20px;
+      display: block;
+    }
+
+    .blog-card img {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid #00eaff00;
+      transition: transform 0.4s;
+    }
+
+    .blog-card p {
+      margin: 12px;
+      font-size: 1rem;
+      color: #00eaff;
+      text-align: center;
       text-decoration: none;
     }
 
-    .feature-card a.btn:hover {
-      background: #60a6df;
+    .blog-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,234,255,0.4), 0 0 15px rgba(0,234,255,0.3);
+    }
+    .blog-card:hover img {
       transform: scale(1.05);
     }
 
@@ -417,43 +423,44 @@
     </nav>
   </header>
 
-  <!-- ---------- HERO ---------- -->
+ <!-- HERO -->
   <section class="hero" id="hero">
     <h1>Welcome to ASWCode</h1>
-    <p>Discover ready-to-use HTML, CSS & JavaScript snippets, projects, and interactive coding tools. Build your skills and create amazing web apps.</p>
-    <a href="#about" class="btn">Learn More</a>
+    <p>Explore educational web development blogs, code snippets, and mini-projects to level up your skills.</p>
+    <a href="#blogs" class="btn">Read Our Blogs</a>
   </section>
 
-  <!-- ---------- ABOUT ---------- -->
-  <section class="about" id="about">
-    <h2>About ASWCode</h2>
-    <div class="about-box">
-      <p><strong>ASWCode</strong> is a modern learning platform designed for beginners, students, and developers who want to explore the world of <span style="color:#00eaff;">HTML</span>, <span style="color:#00eaff;">CSS</span>, and <span style="color:#00eaff;">JavaScript</span> through practical examples.</p>
-      <p>We offer <strong>code snippets</strong>, <strong>real-world mini projects</strong>, and <strong>interactive games</strong> that help you learn by doing. Each snippet is crafted to be easy to understand, responsive, and ready to use in your own projects.</p>
-      <p>Our goal is to make coding <strong>fun, simple, and accessible</strong> to everyone — whether you’re building your first website or exploring creative front-end designs.</p>
-     
 
-       <p>
+ <!-- BLOG HERO -->
+<section class="blog-hero">
+  <h3>Explore Our Blogs</h3>
+  <p>Read insightful guides, tips, and tutorials on web development, online earning, and modern technology trends.</p>
+</section>
+
+<!-- BLOG CARDS -->
+<section class="blog-list" id="blogList">
+
+  <a href="blog-earn-money.html" class="blog-card">
+    <img src="img.png" alt="How to Earn Money Online Safely">
+    <p>How to Earn Money Online Safely</p>
+   
+  </a>
+
+  <a href="blog-avoid-scams.html" class="blog-card">
+    <img src="img2.png" alt="How to Avoid Online Earning Scams and Stay Safe">
+    <p>How to Avoid Online Earning Scams and Stay Safe</p>
   
+  </a>
 
-      <p>Join the <strong>ASWCode</strong> community and start your journey to becoming a confident web developer today!</p>
-    </div>
-  </section>
+  <a href="blog-popular-languages.html" class="blog-card">
+    <img src="img3.png" alt="Popular Programming Languages in 2025">
+    <p>Popular Programming Languages in 2025: The Complete Guide</p>
 
-  <!-- ---------- FEATURE CARDS ---------- -->
-  <section class="features" id="features">
-    <div class="feature-card">
-      <h3>Code Snippets</h3>
-      <p>Copy-ready HTML, CSS, and JS snippets to speed up your web projects.</p>
-      <a href="snippets.html" class="btn">Explore Snippets</a>
-    </div>
-    <div class="feature-card">
-      <h3>Mini Projects</h3>
-      <p>Learn by building real-world examples step-by-step.</p>
-      <a href="projects.html" class="btn">View Projects</a>
-    </div>
-    
-  </section>
+  </a>
+
+</section>
+
+ 
 
   <!-- ---------- FOOTER ---------- -->
   <footer>
